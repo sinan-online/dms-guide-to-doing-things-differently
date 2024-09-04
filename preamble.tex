@@ -1,0 +1,49 @@
+% Compile using UTF-8
+\usepackage[utf8]{inputenc}
+
+\usepackage{xkcdcolors}
+
+\colorlet{dirtyorange}{xkcdDirtyOrange}
+
+\usepackage{mdframed}
+
+\usepackage{hyperref}
+
+\hypersetup{
+	colorlinks=true, % Whether to color links (a thin box is output around links if this is false)
+	%hidelinks, % Hide the default boxes around links
+	urlcolor=dirtyorange, % Color for \url and \href links
+	linkcolor=black, % Color for \ref/\nameref links
+	citecolor=dirtyorange, % Color for reference citations like \cite{}
+	hyperindex=true, % Adds links from the page numbers in the index to the relevant page
+	linktoc=all, % Link from section names and page numbers in the table of contents
+}
+
+\newenvironment{emphasisParagraph}{
+	\begin{quote}
+	\begin{mdframed}[
+		topline=false,
+		bottomline=false,
+		rightline=false,
+		skipabove=\topsep,
+		skipbelow=\topsep,
+		linecolor=xkcdBottleGreen,
+		linewidth=3pt,
+	]
+	\em
+}{
+	\end{mdframed}
+	\end{quote}
+}
+
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\usepackage{biblatex}
+\addbibresource{ExtensionsD20.bib}
+
