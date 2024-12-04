@@ -24,7 +24,7 @@ jobs:
       - name: Upload the PDF
         uses: actions/upload-artifact@v4
         with:
-          name: spell-card
+          name: ExtensionsD20
           path: |
             ./ExtensionsD20.pdf
             ./ExtensionsD20.log
