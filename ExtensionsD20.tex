@@ -723,8 +723,28 @@ For each ``piece of information'' about a creature, players roll Investigation (
 \section{Conflict Against Other Characters}
 
 \subsection{Chases}
-% TODO: Just put in the regular D&D mechanic
+
+The D\&D has an excellent mechanic for chases.
+You can take a dash action as many times as 3 + your Constitution modifier.
+After that, each time you take a dash action, you must make a Constitution check against DC 10, and lose one level of exhaustion on failure.
+If the quarry is outside the sight of the pursuers, they escape.\par
+
+This mechanic, combined with the usual combat mechanics, create great chase scenes.
+Make sure to have an enemy that is slightly faster than the group, perhaps using a \emph{Haste} spell.
+In response, players may cast spells of their own, such as \emph{Grease}, \emph{Web} or \emph{Hold Person}.
+Alternatively, they can attempt to chase the quarry as far as their Constitution allows.\par
+
+If using maps, use a large city map rather than a detailed battle map.
+Try to create a headstart for a quarry to give characters a challenge, and prefer high speed but low constitution monsters.\par
+
+All of this should create enough entertainment for a chase scene.
+If required, you can add random events that turn the terrain in front of the characters to difficult terrain, such as apples falling from a cart.\par
+
+
+
 % TODO: Explain aerial combat specific issues
+
+\subsubsection{Aerial Chases}
 % TODO: Give the example of the aerial combat from my game.
 \subsection{Racing}
 \subsection{Sports \& Competitions}
@@ -762,7 +782,7 @@ I am striving to create realism, and give the player a choice.
 
 \subsection{Dramatic Stand-Offs \& De-escalation}
 
-% TODO: Rewrite in a simplified manner.
+% TODO: Rewrite in a simplified manner. Add a flowchart.
 
 Encounters do not always need to end in violence.
 In the Western genre, there is oftentimes a ``standoff'' or ``showdown'' right before a gun battle.
@@ -823,18 +843,101 @@ In D\&D 5th Edition, there are no gewneralized rules for possession.
 In the case of possession by a ghost, the victim needs to succeed at a Charisma save.
 Otherwise, a spell of \emph{Dispel Evil} can end the possession.
 There are no rules for ending possessions from other beings, such as fiends, outsiders, or more powerful ethereal undead.
-This mechanic sugggests three methods of ending possessions.\par
+This mechanic is a general combat mechanic for ending possession.\par
 
-% TODO: Spell attack rolls, looking for three consecutive wins before getting exhausted... (Alternatively, use HPs) Only Wis based casters can attempt this.
-% TODO: Add modifiers based on preparation.
+Require a total of spell attacks equal to the hit dice of the possessing entity or monster.
+On any failure, the spellcaster takes one level of exhaustion.
+Limit this ability to only Wisdom-based spellcasters.
+Attack rolls are made with advantage if any one of the following is used:
+\begin{itemize}
+	\item The player knows their true name.
+	\item The player has a personal object of a ghost.
+	\item The player has a divine spell focus.
+	\item The player has an additional item with divine quality, such as holy water.
+\end{itemize}
+
+Each one of these items can be used once to get an advantage once during an exorcism session.
+Multiple personal objects of a ghost can be used once, each.
+
+At the end of an exorcism, the possessing entity will appear next to the victim, and can be attacked normally.\par
+
+The purpose of this mechanic is give incentive to players to prepare for such an encounter.\par
 
 \subsection{Subterfuge}
 
 % TODO: Add rule for false appearance: The difficulty to spot is DC 20 + the monster's CR or the spellcaster's spellcasting abilty.
 
 \section{Conflict Against Natural Forces}
-\subsection{Firefighting \& Spread Mechanics}
-% TODO: Fire as a monster.
+\subsection{Firefighting \& Spread Mechanic}
+
+In D\&D, we have Fire Elementals, a monster.
+In real life, fire itself is a threat, and a worse one.
+Fire is a monster.\par
+
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Fire}
+	\DndMonsterType{Elemental, neutral}
+
+	\DndMonsterBasics[
+		armor-class = {12 (natural armor)},
+		hit-points  = {\DndDice{1d10}},
+		speed       = {0 ft.},
+	]
+
+	\DndMonsterAbilityScores[
+		str = 12,
+		dex = 0,
+		con = 10,
+		int = 0,
+		wis = 0,
+		cha = 0,
+	]
+
+	\DndMonsterDetails[
+		damage-vulnerabilities = {cold, water, suffocation},
+		damage-immunities  = {bludgeoning, piercing, slashing, fire, magic, poison, necrotic, acid, poison, radiant, psychic},
+		damage-resistances   = {thunder, force},
+		condition-immunities = {charmed, frightened, grappled, paralyzed, prone, poisoned, stunned, unconscious},
+		senses = {none},
+		languages = --,
+		challenge = 1/8,
+	]
+
+	% Actions
+	\DndMonsterSection{Actions}
+
+	\DndMonsterMelee[
+		name=Burn,
+		mod=+1,
+		dmg=\DndDice{1d10+1},
+		dmg-type=fire,
+		%extra=,
+	]
+
+	\DndMonsterAction{Spread}
+	At each succesful hit, the fire either adds another hit die to itself, or
+
+	\DndMonsterSection{Description}
+	Fire has no senses, and is immune all damage types other than cold, thunder and force.
+	It has resistance to thunder and force.
+	It is immune to all conditions other than invisible and petrified.
+	It still emits heat when invisible, but petrification puts it out.
+	It makes attack only within 5ft, choosing the victim randomly.
+	Whenever it succeeds at an attack roll, it increases by one hit die, or clones itself to the next square.
+	If there are materials vulnerable to fire, it will spread to these squares first.
+	In addition, any magical or non-magical effect that causes suffocation will do double damage.
+
+\end{DndMonster}
+
+With this mechanic, fire is very easy to deal with if the players have the right materials and if they address it early.
+If they do not have the right materials, or if they let the fire spread, it can turn into a much more powerful monster within five to ten turns.
+One possibility is to have the fire going on a battlemap as a battle goes on.
+The players may choose to take advantage of the fire, and decide to deal with it, or may choose to spread their effort between enemy combatants and the fire.\par
+
+\subsubsection{Spread Mechanic}
+
+This type of spread-on-hit mechanic can be extended to other threats, such as oozes and biological threats.
+
 \subsection{Floods}
 
 \subsection{Climbing}
