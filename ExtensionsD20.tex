@@ -641,7 +641,7 @@ I have not playtested this mechanic yet, and I would love to hear feedback.
 I am not planning to update this mechanic at the moment.
 
 
-\section{Running a Small Business}
+	A\section{Running a Small Business}
 
 \begin{emphasisParagraph}
 	A shop that the player values is a great way to use hooks into a large number of adventures.
@@ -657,74 +657,102 @@ I am not planning to update this mechanic at the moment.
 
 
 Running a business is a ``downtime activity'' in the DM's guide.
-The rules involve set costs and a $d100$ table.
-The probability of turning is a profit is not impacted by the player's decisions or the character's abilities.
-In real life, a small business is usually complex.
-Revenue is not guaranteed, even though costs are fairly standard.
-Some people manage to make it work, and other do not.
-This is a lost opportunity in gamifying, so here are some new rules.\par
+The rules involve set costs and a $d100$ table, on page 129 in the 2014 edition.
+You also need to use the cost table on page 127.\par
 
-At the end of each month:
-\begin{enumerate}
-	\item Deduct the costs
-	\item Roll a skill check to see if the shop generates Revenue
-	\item If successful, roll a ``revenue die'' to determine how much.
-\end{enumerate}
+Like most optional rules on the DM's Guide, this is perfectly fine and a great way to run a campaign.
+You can also use the rules found on this web page to add a bit more flair:
+\url{https://www.thievesguild.cc/core/businesses}\par
 
-\subsection{Determine the Costs}
-A shop incurs costs monthly.
-According to the DM's Guide, the standard cost is 2gp per day, and half of that goes to a skilled employee.
-Use the following table to offer alternatives to the player.\par
+If you want something a bit more involved, you can run shops as their own NPC or monster.\par
 
-\begin{DndTable}[header=Shop Costs]{Xll}
-Cost (per day)	& Revenue Cap (per day) \\
-2 gp	&	4 gp \\
-3 gp	&	8 gp \\
-4 gp	&	12 gp \\
-5 gp	&	16 gp \\
-6 gp	&	20 gp \\
-7 gp	&	24 gp \\
-\end{DndTable}
+\begin{emphasisParagraph}
+My father, who founded a business in 1984 always said that the business had turned into a monster,
+and that he was having trouble catching up.
+\end{emphasisParagraph}
 
-In this table, the first option is the standard given in the DM's Guide.
-You can interpret the next two options as better locations, better foot traffic, or a richer neighborhood.
-This increases the total sellable market, allowing for higher revenue.
-Note that the costs are incurred monthly.
-For example, in the standard option, player pays $2 x 30 = 60$ at the end of each month.\footnote{Adjust to the setting as needed for consistency, for example, Eberron has 28 days in month.}\par
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Shop}
+	\DndMonsterType{Construct (Business), lawful evil}
+	% Actions
+	\DndMonsterSection{Stats}
+	\DndMonsterAction{Cost}
+	2 gp
+	\DndMonsterAction{Capital}
+	20 gp
+	\DndMonsterAction{Competitiveness}
+	7 (-2)
+	\DndMonsterAction{Profitability}
+	$d4$
 
-The salary of the skilled employee is included in these costs, and is 1 gp, as per DM's Guide. In other words, the cost increase comes from the increase in rent.\par
+	% Actions
+	\DndMonsterSection{Actions}
+	The shop takes one action every month.
 
-\subsection{Determine the Revenue}
-If a character decides to spend the month at a shop, roll either one of the three checks:
+	\DndMonsterAction{Make Profit}
+	Roll $d20$ and add the competitiveness bonus.
+	DC is the cost of the business when there are no competitiors.
+	When there is a competitor, the roll is a contested roll, see below.
+	If you pass, you make gp equal to
 
-\begin{DndTable}[header=Skill Check to Generate Income]{lX}
-Check	&	Conditions \\
-Tool proficiency (Dexterity)	&	... if the shop is an artisan's or craftperson's shop and they are doing honest work. \\
-Persuasion (Charisma)			&	... if they are doing trade, like a merchant or a general goods store. \\
-Deception (Charisma)			&	... if they are running a scam or outright trying to deceive customers.	\\
-\end{DndTable}
+	\DndMonsterAction{Compete}
+	Roll $d20$ and add the competitiveness bonus.
+	The competitor also rolls.
+	Whoever scores higher, rolls the profitabilty die, and subtracts from the others' capital.
 
-This replaces the $d100$ table in the DM's Guide, under ``Running a Business''.
-If the character does not spend time at the shop or business, the DM rolls as the hired help.
-Either create the employee as an NPC or simply use +5 as the bonus.
-So long as the skilled employee is working, the player can roll at an advantage.\par
+	\DndMonsterSection{Description}
+	\emph{Competitiveness} of a business is like an attack roll.
+	\emph{Profitability} of a business is like a damage roll.
+	\emph{Capital} of a business is like hit points.
+	\emph{Cost} is the daily cost of running a business, and comes from the table on page 127 of the DM' Guide from the 2014 edition.
 
-If the check passes, roll the ``revenue''. This is a lot like the ``damage roll''.
-The monthly revenue is going to be the outcome of the die, but will be capped by the ``Revenue Cap'' in the table above.\par
 
-% TODO: Explain nat 20 and nat 1.
+\end{DndMonster}
 
-\begin{DndTable}[header=DC \& Revenue Die]{Xrrr}
-DC	&	Revenue Die \\
-5	&	$1d4$\\
-10	&	$1d6$\\
-15	&	$1d8$\\
-20	&	$1d10$\\
-25	&	$1d12$\\
-\end{DndTable}
+\subsection{Profit Die \& Cost}
+Typically, cities are more profitable because of foot traffic,
+and major junctions are more profitable.
+Use the following table to decide on a location and the profit die.
 
-For each month, roll the proficiency, against the DC chosen by the player.
-If passed, roll the ``revenue'' die, cap by the location, and multiply by the number of days in the month.\par
+% TODO: Table to determine cost and profit die.
+
+% TODO: Decide on rules for the profit bonus.
+
+% TODO: Maybe add a DC for profitability?
+
+% TODO: Minigame: roll to create shops, ask the player if they want to purchase them.
+
+Either use the following table as a guide, or roll $3d6$ to determine \emph{Profit Bonus}
+
+\subsection{Normal Times}
+You pay the cost of a shop, and you pay into the capital to start the business and keep it from bankruptcy.
+
+Every month, roll for profit. Add the result to the
+
+
+
+\subsection{Empty Shop Sheet}
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Name \& Type:}
+	\DndMonsterType{Construct (Business), lawful evil}
+	% Actions
+	\DndMonsterSection{Stats}
+	\DndMonsterAction{Cost}
+	........ gp
+	\DndMonsterAction{Capital}
+	........ gp
+	\DndMonsterAction{Profit Bonus}
+	........
+	\DndMonsterAction{Profit Die}
+	........
+
+
+\end{DndMonster}
+
+\subsection{Product Management}
+
+\subsection{Bankruptcy}
+
+
 
 \subsection{Events \& Hooks}
 
@@ -747,11 +775,7 @@ If the shipments do not come in, the shop cannot generate any revenue.\par
 	4	&	The NPC working for the shop rolls Deception (Charisma) against the PP of the player. If they succeed, tell the player that the revenue is 1 less than the ``revenue die''. They will try again next month until they fail. If they fail, the shop owner catches them. \\
 	5	&	Increased competition --- either a new store or an existing store engaging in a price war. The DC is increased by 5, and will remain so unless competition is removed.\\
 	6	&	If there is increased competition, it ends. Otherwise, nothing happens.\\
-	\end{DndTable}
-
-\subsection{Optional Rule: Detailed Costs, Leases \& Investment}
-
-% TODO
+\end{DndTable}
 
 \paragraph*{Potential hooks \& extra challenges}
 % The shop is attacked and merchandize stolen.
@@ -778,7 +802,7 @@ In almost all of the computer games with boss battles, you have to save and load
 What I am trying to get at is: preparing for the battle can be part the fun.\par
 
 \begin{emphasisParagraph}
-	\paragraph*{Preparing for the battle can be part of the fun.}
+	Preparing for the battle can be part of the fun.
 \end{emphasisParagraph}
 
 \paragraph*{Cue the players}
@@ -788,26 +812,50 @@ Honestly prepare a boss that is twice as powerful as usual, or use the mechanic 
 
 \paragraph*{Doing Research}
 
-For each ``piece of information'' about a creature, players roll Investigation (Intelligence) DC 20 + Modifiers.
-Here, a ``piece of information'' refers to one of the following: one resistance (or lack thereof), one immunity, one vulnerability, and one action.\par
+To do research about a creature, one player in the party roll Investigation (Intelligence).
+The DC is 20 + CR of the creature.
+Upon a success, reveal to the players one of the following: An immmunity, an resistance, a vulnerability or a special attack.
+(Optionally, you can extend this to learning a demon's true name, either the location or the description of a lich's phylactery.)
+To do research, there has to be a source of information, such as a library, a wise person, or even just the tavern.
+At each source, the party can roll only once, if they fail, the source does not have information relevant to the creature.\par
 
-% For stats, roll the stat of the monster and add it to the DC. That's the modifier.
-% To understand the save against an ability, roll the save. That's the modifier. If they pass, tell them tha
+Typical sources of information are: taverns, markets, schools, colleges, guild halls, university campuses, wise hermits, and of course, libraries.
+Particularly good sources of information will give a bonus die, see the table below.
+However, research takes time, and the party may have to make a choice between facing the creature, or going at it alone.\par
 
-% Libraries give bonus. Larger libraries give better bonus. Internet gives a lot of bonus, $d10$. An arcane library gives $d12$. Access to forbidden knowledge and generative AI gives $d20$, but either one of the dice count as Nat 1.
+
+\begin{DndTable}[header=Events]{rXX}
+	Source					&	Bonus	& Time Spent \\
+	Inn 					&	---		& 1d4 hours  \\
+	Market 					&	---		& 1d4 hours  \\
+	Town Square				&	---		& 1d4 hours  \\
+	College (Professor) 	&	$1d4$	& 1 day  \\
+	Library 				&	$1d6$	& 1 day  \\
+	Arcane/Major Library 	&	$1d8$	& 1 week  \\
+	Internet	 			&	$1d10$	& 1 day  \\
+	Forbbidden Tomes		&	$1d12$	& 1 day  \\
+	Generative AI			&	$1d12$	& 1 hour  \\
+\end{DndTable}
+
+If a location qualifies as both types of sources, choose the one with the higher bonus and do not roll more than once.\par
+
+At DM's discretion, with ``Forbidden tomes'' and ``Generative AI'', if the bonus die is 1, there may be unpleasant circumstances.\par
+
+So for example, Kaer Morhen, before it gets sacked, would probably have given \par
+
+The check does not benefit from \emph{Bless} or \emph{Bardic Inspiration}, since the time scale is larger than the duration of these effects.
+However, the expertise dice from earlier in this book may apply and stacks. (\nameref{chap:d20_plus_d4})\par
+
 
 \begin{emphasisParagraph}
 	Mechanics in the current section are for everything that can happen ahead of time before a battle.
 	For a mechanic concerning the seconds before a violent encounter starts, see the \nameref{sec:dramatic_standoff} Section.\par
 \end{emphasisParagraph}
 
-
 \subsection{Examples}
 
 \subsection{Playtest Notes}
 
-% TODO: Bonuses - learning real name of a demon
-% TODO: Bonuses - learning the backstory/identity of a ghost, getting a relevant item, giving a proper burial.
 
 
 \section{Financial Management \& Investment}
@@ -976,9 +1024,8 @@ At the end of an exorcism, the possessing entity will appear next to the victim,
 
 The purpose of this mechanic is give incentive to players to prepare for such an encounter.\par
 
-% TODO: Add the samme to the section "resisting possession".
-% TODO: Add an alternative rule: works as above, but \emph{Dispel Evil} gives 9 automatic successes, or the level that is was cast at.
 
+% TODO: Cite "Ultimate Bestiary The Dreaded Accursed" for more possessing entities.
 \subsection{Subterfuge}
 
 % TODO: Add rule for false appearance: The difficulty to spot is DC 20 + the monster's CR or the spellcaster's spellcasting abilty.
