@@ -1142,6 +1142,59 @@ This type of spread-on-hit mechanic can be extended to other threats, such as oo
 \section{Anxiety}
 % TODO: Write a stat block as a monster, immune to all damage. Casts Fear as a spell, once per day. Calm can help. Heroism should be fixing it, you should also have a saving throw, and the anxiety can have levels as a spellcaster.
 % https://www.reddit.com/r/dndnext/comments/bar5iy/how_to_counter_fear_andor_paralyze/
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Anxiety}
+	\DndMonsterType{Fiend, chaotic neutral}
+
+	\DndMonsterBasics[
+		armor-class = {-},
+		hit-points  = {\DndDice{1d10}},
+		speed       = {0 ft.},
+	]
+
+	\DndMonsterAbilityScores[
+		str = 0,
+		dex = 0,
+		con = 0,
+		int = 0,
+		wis = 0,
+		cha = 12,
+	]
+
+	\DndMonsterDetails[
+		damage-vulnerabilities = {psychic, radiant},
+		damage-immunities = {bludgeoning, cold, suffocation, piercing, slashing, fire, magic, poison, necrotic, acid, poison, thunder, force},
+		senses = {none},
+		languages = --,
+		challenge = 1/8,
+	]
+
+	\DndMonsterSection{Actions}
+	\DndMonsterAction{Panic Attack}
+
+	\DndMonsterSection{Traits}
+	\DndMonsterAction{Damage Transfer}
+	When attacked with psychic or radiant damage, the player takes only half the psyhic damage dealt to it, anxiety takes the other half.
+
+	\DndMonsterAction{Damage Transfer}
+	If the player is a Charisma-based spellcaster, they can opt to use thier Anxiety's Charisma instead of their own.
+	If they do so, on a critical hit, the player suffers from a panic attack.
+
+	\DndMonsterSection{Description}
+	Anxiety is only in the hosts' mind, so it has no physical attributes, or speed.
+	It goes wherever the host goes.
+	For Intelligence and Wisdom, it uses the host's scores.
+	However, it has its own Charisma, which determines how strong it is.
+
+	\DndMonsterSection{Roleplay Mechanics}
+	\DndMonsterAction{What If?}
+	When a character has anxiety, the player has to come up with ideas about what could go wrong if the roll fails.
+
+\end{DndMonster}
+
+
+
+
 \section{Insecurity}
 \section{Curses}
 % TODO: How to overcome curses
