@@ -28,3 +28,21 @@ jobs:
           path: |
             ./ExtensionsD20.pdf
             ./ExtensionsD20.log
+
+      - name: Tag release with PDF version
+        run: |
+          TAG_NAME="pdf-$(date +'%Y%m%d-%H%M')"
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
+
+      - name: Commit PDF back to repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch
+          git checkout main
+          mkdir -p docs
+          cp ExtensionsD20.pdf docs/
+          git add docs/ExtensionsD20.pdf
+          git commit -m "Update compiled PDF [skip ci]" || echo "No changes to commit"
+          git push origin main
