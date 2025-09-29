@@ -1,0 +1,45 @@
+{
+	"name": "LaTeX Dev Container",
+	"dockerFile": "Dockerfile",
+	"workspaceFolder": "/workspace",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=bind",
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.vimrc,target=/root/.vimrc,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.devcontainer/.bash_history,target=/root/.bash_history,type=bind"
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"latex-workshop.latex.tools": [
+					{
+						"name": "latexmk",
+						"command": "latexmk",
+						"args": [
+							"-pdf",
+							"-interaction=nonstopmode",
+							"-synctex=1",
+							"%DOC%"
+						]
+					}
+				],
+				"latex-workshop.latex.recipes": [
+					{
+						"name": "latexmk",
+						"tools": [
+							"latexmk"
+						]
+					}
+				],
+				"latex-workshop.view.pdf.viewer": "tab",
+				"latex-workshop.latex.autoBuild.run": "onFileChange",
+				"latex-workshop.latex.autoClean.run": "onBuilt"
+			},
+			"extensions": [
+				"James-Yu.latex-workshop"
+			]
+		}
+	},
+	"postCreateCommand": "tlmgr update --all",
+	"remoteUser": "root"
+}
