@@ -611,37 +611,73 @@ Otherwise, the rolling gets tedious very quickly.
 
 Player can be taking the interview, or interviewing an NPC --- this mechanic allows for both.\par
 
-The job will require at least one skill --- for the sake of example, let's say that it is proficiency with Artisan's Tools.
-The interviewer determines a DC. If the interviewer is an NPC, this can be played over in three rounds where the DC keeps increasing.
-The character being interviewed can choose to roll Deception (Charisma) or the skill that is required for the job.
-If they choose to roll the required skill, they need to beat the DC. However, the interviewer also needs to roll Insight (Wisdom) against the same DC.
-If they both succeed, then the interviewer is convinced that the character is skilled.
-If the interviewer rolls lower, they are not sure.
-If interviewee rolls Deception (Charisma), the interviewer will roll Insight (Wisdom) in contest.
-If the interviewer rolls higher, they find out that the character is deceiving them.
-If they intrviewer rolls lower than the DC they set, they are not sure about the skill level.\par
+\subsection{Setup}
+\begin{enumerate}
+  \item \textbf{Required Skill.} The interviewer designates one skill (e.g., proficiency with Artisan’s Tools) that’s relevant to the job.
+  \item \textbf{Determine DC.} The interviewer chooses a Difficulty Class (DC). If an NPC conducts the interview, you may run up to three “rounds,” increasing the DC each round to represent tougher questions.
+\end{enumerate}
 
-This mechanic ensures a few things: First, the interviewee has a choice, which makes it more fun for players to play.
-Second, if the player is the interviewer (for instance, if they are hiring a henchman or a staff for their business)
-the player will always be required to roll Insight (Wisdom), which will keep them uncertain about whether they were deceived or not.\par
+\subsection{Making the Rolls}
 
-\subsection{Variant: Deception}
+\begin{DndTable}{@{}p{3cm} p{4cm} p{4cm} p{4cm}@{}}
+\toprule
+\textbf{Situation} & \textbf{Interviewee’s Roll} & \textbf{Interviewer’s Roll (Insight)} & \textbf{Outcome} \\
+\midrule
+Interviewee plays straight
+& Required skill vs.\ DC
+& Insight vs.\ DC
+&
+\begin{itemize}
+  \item Both succeed \(\implies\) Interviewer is convinced of competence.
+  \item Interviewee succeeds but interviewer fails \(\implies\) Interviewer remains uncertain.
+  \item Interviewee fails \(\implies\) Interview fails outright.
+\end{itemize}
+\\[1ex]
+Interviewee attempts deception
+& Deception (Cha) vs.\ DC
+& Insight (Wis) vs.\ DC (contest)
+&
+\begin{itemize}
+  \item Interviewer rolls higher \(\implies\) Deception uncovered; interview fails.
+  \item Interviewer rolls lower \(\implies\) Interviewer believes the lie (treat as straight success if DC was met).
+\end{itemize}
+\\
 
-The same kind of mechanic can be used whenever a player wants to understand the intentions of an NPC.
-Say that the DC is 12. If the player rolls less than 12, they do not know the intentions of the NPC.
-If they roll higher than DC 12, they think that they know the intentions of the NPC, \emph{unless the NPC rolled a higher number on Deception (Charisma).}
-This will keep players second guessing whether they understood the intentions of an NPC correctly even when they win.\par
+\end{DndTable}
 
-\subsection{Playtest Notes}
+\noindent\textbf{Roll Procedure:}
+\begin{enumerate}
+  \item The player chooses \emph{either} to roll the required skill \emph{or} Deception.
+  \item The interviewer always rolls Insight against the same DC.
+\end{enumerate}
 
-I have not playtested this mechanic yet, and I would love to hear feedback.
+\subsection{Key Benefits}
+\begin{itemize}
+  \item \textbf{Player Agency:} The interviewee chooses how to approach the check (honest skill test vs.\ bluff).
+  \item \textbf{Meaningful Insight Rolls:} Even when PC–NPC roles are reversed, Insight rolls keep everyone uncertain and engaged.
+\end{itemize}
 
-\subsection{Future Work}
+\section{Variant: Reading Intentions}
+Use the same approach whenever a character tries to discern NPC motives:
+\begin{enumerate}
+  \item \textbf{Set a DC} appropriate to how opaque the NPC’s motives are (e.g., DC 12).
+  \item \textbf{Player rolls Insight} vs.\ that DC.
+  \item \textbf{NPC may roll Deception} vs.\ the same DC as a reaction.
+\end{enumerate}
+\begin{itemize}
+  \item Success without contest \(\implies\) PC thinks they understand the NPC.
+  \item NPC’s Deception beats Insight \(\implies\) PC is misled, even if they \enquote{succeeded} on their roll.
+\end{itemize}
 
-I am not planning to update this mechanic at the moment.
+\section{Playtest Notes}
+\begin{itemize}
+  \item \textbf{Unplaytested.} Please try this at your table and share any feedback on pacing, balance, and player engagement.
+\end{itemize}
 
+\section{Future Work}
+At present, no planned revisions—but open to community suggestions!
 
-	A\section{Running a Small Business}
+\section{Running a Small Business}
 
 \begin{emphasisParagraph}
 	A shop that the player values is a great way to use hooks into a large number of adventures.
@@ -704,8 +740,6 @@ and that he was having trouble catching up.
 	\emph{Profitability} of a business is like a damage roll.
 	\emph{Capital} of a business is like hit points.
 	\emph{Cost} is the daily cost of running a business, and comes from the table on page 127 of the DM' Guide from the 2014 edition.
-
-
 \end{DndMonster}
 
 \subsection{Profit Die \& Cost}
