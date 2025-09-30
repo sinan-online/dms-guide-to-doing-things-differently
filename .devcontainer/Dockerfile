@@ -37,7 +37,8 @@ RUN tlmgr install \
     mdframed \
     zref \
     needspace \
-    titling
+    titling \
+    amsmath
 
 RUN tlmgr install \
     courier
