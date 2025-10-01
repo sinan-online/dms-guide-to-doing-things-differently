@@ -48,5 +48,5 @@ jobs:
           mkdir -p docs
           cp ExtensionsD20.pdf docs/
           git add docs/ExtensionsD20.pdf -f
-          git commit -m "Update compiled PDF [skip ci]" || echo "No changes to commit"
+          git commit -m "Update compiled PDF $(date +'%Y%m%d-%H%M')" || echo "No changes to commit"
           git push origin main
