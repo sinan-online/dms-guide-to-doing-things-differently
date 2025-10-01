@@ -572,8 +572,6 @@ So if you are an ``advanced'' speaker of Elvish, but it is not your native langu
 you can roll againt DC 5 to understand what people are saying.
 It is only when you reach ``native'' proficiency that the DC drops to 0.\par
 
-% TODO: Give credit to Languages of Eberron
-
 Depending on the setting, ``familiar'' may mean either ``same language family'' (like Indo-European languages in our world),
 or just the regular languages: elvish, dwarven, halfling and gnome. Languages that are not ``familiar'',
 either because they are unfamiliar to the characters, such as Dranonic, or languages that are from other language families add +5 to the DC to understand,
@@ -608,6 +606,8 @@ Otherwise, the rolling gets tedious very quickly.
 
 \section{Job Interview}
 \label{sec:job_interview}
+
+% TODOL Take out this section entirely? Or simplify and move to the bottom?
 
 Player can be taking the interview, or interviewing an NPC --- this mechanic allows for both.\par
 
@@ -681,7 +681,7 @@ Use the same approach whenever a character tries to discern NPC motives:
 \section{Future Work}
 At present, no planned revisions—but open to community suggestions!
 
-\section{Running a Small Business}
+\section{Running a Business}
 
 \begin{emphasisParagraph}
 	A shop that the player values is a great way to use hooks into a large number of adventures.
@@ -706,56 +706,176 @@ You can also use the rules found on this web page to add a bit more flair:
 
 If you want something a bit more involved, you can run shops as their own NPC or monster.\par
 
-\begin{emphasisParagraph}
-My father, who founded a business in 1984 always said that the business had turned into a monster,
-and that he was having trouble catching up.
-\end{emphasisParagraph}
-
 \begin{DndMonster}[width=.5\textwidth - 8pt]{Shop}
 	\DndMonsterType{Construct (Business), lawful evil}
 	% Actions
 	\DndMonsterSection{Stats}
-	\DndMonsterAction{Cost}
-	2 gp
-	\DndMonsterAction{Capital}
-	20 gp
-	\DndMonsterAction{Competitiveness}
-	7 (-2)
-	\DndMonsterAction{Profitability}
-	$d4$
+	\DndMonsterAction{Daily Cost (from DMG)}
+	\hfill 2 gp
+	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
+	\hfill 180 gp
+	\DndMonsterAction{Competitiveness (analogous to the Attack Bonus)}
+	\hfill +2
+	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
+	\hfill $1d4$
+
+	\DndMonsterSection{Costs}
+	Every month, the total cost (30 x daily cost) is subtracted
+	from the paid-in capital, before the profit roll.
+	If the paid-in capital goes down to 0, the shop goes bankrupt,
+	and there is nothing to recuperate.
 
 	% Actions
 	\DndMonsterSection{Actions}
 	The shop takes one action every month.
 
 	\DndMonsterAction{Make Profit}
-	Roll $d20$ and add the competitiveness bonus.
-	DC is the cost of the business when there are no competitiors.
-	When there is a competitor, the roll is a contested roll, see below.
-	If you pass, you make gp equal to
+	This is only possible if there are no competitors.
+	Roll $d20$ and add the competitiveness bonus against DC 10.
+	If you pass, roll for profit, and make profit equal to the roll
+	times 30 gp. The gold can be used to replenish the capital,
+	and is paid to the shop owner if it is higher than the max capital.
+
+	\DndMonsterAction{Collude}
+	This is possible only if there is a competitor, and both agree to collude.
+	Roll $d20$ and add the competitiveness bonus against DC 10.
+	The competitor also rolls. They share their profits by adding up
+	their profit rolls and dividing by 2.
 
 	\DndMonsterAction{Compete}
+	This is possible only if there is a competitor. If the competitor
+	or the business does not want to collude, they compete.
 	Roll $d20$ and add the competitiveness bonus.
 	The competitor also rolls.
-	Whoever scores higher, rolls the profitabilty die, and subtracts from the others' capital.
+	Whoever wins rolls for profit, gets twice as many gp as they would have.
+	(Multiply the roll outcome by 90 rather than 30.)
+	The loser actually loses amount equal to the roll times 30.
 
-	\DndMonsterSection{Description}
-	\emph{Competitiveness} of a business is like an attack roll.
-	\emph{Profitability} of a business is like a damage roll.
-	\emph{Capital} of a business is like hit points.
-	\emph{Cost} is the daily cost of running a business, and comes from the table on page 127 of the DM' Guide from the 2014 edition.
+
+	\DndMonsterAction{Replenish Capital}
+	The owner can increase the paid-in capital by paying gold to the shop.
+	This cannot go over the max allowed paid-in capital.
+	Note that paid-in capital cannot be converted to GP for the owner,
+	this is more like inventory or assets, necessary for profit generation.
+
+
 \end{DndMonster}
 
-\subsection{Profit Die \& Cost}
+\subsection{At the Helm}
+If the owner of the shop spends majority of the month at the shop or the business,
+they can add their relevant skill bonus instead of the shop's bonus.
+The relevant skill for a merchant is Cha (Persuasion); for a magic shop,
+it is Int (Arcana), and for smiths and other trades, it is the relevant tool proficiency.
+
+\subsection{Paid-in Capital \& Cost}
+According to the DMG, the cost of a shop is based on one employee, whose
+salary if 1gp per day. This leaves the rest of the cost to the rent of the
+shop.\par
+
+Paid-in capital is set when starting the businss, and the player character
+has to pay this money. This cannot be recuperated. The higher this value,
+the more difficult it is for competitors to outcompete the business.
+This is set by the DM, depending on the kind of shop,
+
+\subsection{Competition}
+If the business has no competitors, it just makes profit.
+If there is one compettor, the businesses can collude for safety, or compete for profits
+and to run the other out of business. The competitor business is an NPC,
+and the DM takes the decisions for it.\par
+
+However, if there are multiple competitors, run these as one NPC - see below
+for either ``Market'' or a ``Large Market'' as below.
+Alternatively, if there is one strong
+market player, run this as a ``Company'' - also see below.
+
+\subsection{Product Lines}
+
+A business can hold as many lines as equal to its competitiveness bonus.
+Think of these as being analogous to items of a character.\par
+
+To onboard a product line, the shop owener has go through a quest, or
+actively search for an opportunity. They then have to pay the
+capital requirements
+
+\subsubsection{Specialty Goods}
+
+% TODO
+
+\subsubsection{Luxury Line}
+
+% TODO
+
+\subsubsection{Discount Line}
+
+% TODO
+
+\subsubsection{Essential Service}
+
+% TODO
+
+\subsubsection{Exclusive Contract}
+Guarantees a profit every month. However, if the patron withdraws support,
+the additional paid-in capital disappears, and is nor recuperated, and
+the additional profit goes away. This can happen at the DM's discretion,
+or by rolling a 1 on a $d100$ rolled every month.\par
+
+Note that the capital requirements increase the maximum paid-in capital,
+and can be useful for protecting the business.
+(Or disastrous if the patron pulls support at the wrong time.)\par
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Exclusive Contract}
+	\DndMonsterType{Product Line: Exclusive Contract}
+%	\DndMonsterSection{Stats}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 45 gp
+	\DndMonsterAction{Additional Profit Die}
+	\hfill $1d4 + 1$
+\end{DndMonster}
+
+Hook: The patron may demand favors, errands, or loyalty.\par
+
+The capital requirements and the additional profit die can be set by the DM.
+For example, a guaranteed government contract could look like the following:
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Government Contract}
+	\DndMonsterType{Product Line: Exclusive Contract}
+%	\DndMonsterSection{Stats}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 120 gp
+	\DndMonsterAction{Additional Profit Die}
+	\hfill $1$
+\end{DndMonster}
+
+This brings in 30 gp a month, guaranteed, but requires a high level of capital.
+
+\subsubsection{Original Design}
+
+% TODO: Roll for a new line: Charisma / Cost / Originality ? Or Capital / Competitiveness / Profit ?
+
+\subsubsection{Illegal Side Hustle}
+
+% TODO
+
+\subsection{Different Types of Shops}
+
+% TODO: Smithy
+
+% TODO: Bakery
+
+% TODO: Magic Shop
+
+% TODO: Alchemist
+
+% TODO: Market
+
+% TODO: Large Market
+
+% TODO: Large Competitor
+
 Typically, cities are more profitable because of foot traffic,
 and major junctions are more profitable.
 Use the following table to decide on a location and the profit die.
 
-% TODO: Table to determine cost and profit die.
-
-% TODO: Decide on rules for the profit bonus.
-
-% TODO: Maybe add a DC for profitability?
 
 % TODO: Minigame: roll to create shops, ask the player if they want to purchase them.
 
@@ -768,28 +888,25 @@ Every month, roll for profit. Add the result to the
 
 
 
-\subsection{Empty Shop Sheet}
+\subsection{Empty Business Sheet}
 
-\begin{DndMonster}[width=.5\textwidth - 8pt]{Name \& Type:}
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Name:}
 	\DndMonsterType{Construct (Business), lawful evil}
 	% Actions
 	\DndMonsterSection{Stats}
-	\DndMonsterAction{Cost}
-	........ gp
-	\DndMonsterAction{Capital}
-	........ gp
-	\DndMonsterAction{Profit Bonus}
-	........
-	\DndMonsterAction{Profit Die}
-	........
+	\DndMonsterAction{Daily Cost}
+	\hfill ......gp
+	\DndMonsterAction{Paid-in Capital}
+	\hfill ......gp
+	\DndMonsterAction{Competitiveness}
+	\hfill ........
+	\DndMonsterAction{Profit Roll}
+	\hfill ........
+	\DndMonsterAction{Required Proficiency}
+	\hfill ........
 
 
 \end{DndMonster}
-
-\subsection{Product Management}
-
-\subsection{Bankruptcy}
-
 
 
 \subsection{Events \& Hooks}
@@ -827,6 +944,8 @@ If the shipments do not come in, the shop cannot generate any revenue.\par
 \section{Networking}
 
 % TODO: Roll Cha to find out if people remember you. DC based on time passed.
+
+% TODO: Network as an NPC
 
 \section{Battle Preparation}
 \label{sec:battle_preparation}
