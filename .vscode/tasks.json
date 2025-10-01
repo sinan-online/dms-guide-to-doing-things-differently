@@ -13,9 +13,17 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": [
-
-			]
+			"problemMatcher": []
+		},
+		{
+			"label": "Build LaTeX Twice",
+			"command": "sh",
+			"args": [
+				"-c",
+				"pdflatex -interaction=nonstopmode \"${file}\" && pdflatex -interaction=nonstopmode \"${file}\""
+			],
+			"dependsOrder": "sequence",
+			"problemMatcher": []
 		}
 	]
 }
