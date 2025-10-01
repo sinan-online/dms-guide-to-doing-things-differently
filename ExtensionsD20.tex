@@ -47,7 +47,7 @@ To that end, this book strives to provide ways to create encounters to make our 
 This book adds mechanics for a diverse set of non-combat challenges and an option to bulid diverse \& relatable characters.
 \end{emphasisParagraph}
 
-Most non-combat challenges in roleplaying games are resolved through either roleplay, or one roll of the die.
+Most non-combat challenges in roleplaying games are resolved through either roleplay, or just one skill check.
 Roleplay is fun. However, I find that roleplay can be burdensome sometimes.
 Lots of players simply want to make choices, roll dice based on those choices, develop tactics to win.
 I find that mechanics, player empowerment, and the risk of failure create enjoyment for many players.
@@ -79,7 +79,9 @@ There may be flying cities in the setting, but the best I can do with a spellcas
 	Guiding principle 3: If an NPC can accomplish \emph{X}, there should be a way for PCs to accomplish \emph{X} as well.
 \end{emphasisParagraph}
 
-
+Perhaps another way to look at D\&D is: it is collective storytelling and
+role-play that is interspersed with one type of minigame: the combat encounter.
+This book aims to diversify and increase the types of minigames.
 
 Feel free to use each chapter separately, or altogether. Enjoy.
 
@@ -684,15 +686,10 @@ At present, no planned revisions—but open to community suggestions!
 \section{Running a Business}
 
 \begin{emphasisParagraph}
-	A shop that the player values is a great way to use hooks into a large number of adventures.
-	You know how it is the merchants that are often quest givers?
-	It will hit closer to home to your players if they are the shop owner.
-	\paragraph*{Consider using this mechanic if you}
-	\begin{itemize}
-    \item think that the rule from the DM's guide are not fun enough,
-    \item want to create bonds with hired NPCs and the players, to use later as hooks,
-    \item want to create other hooks for adventures.
-    \end{itemize}
+	Some players want a source of income,
+	and many people dream of owning their business.
+	The rules here are meant to help DMs guide
+	that fantasy in role play.
 \end{emphasisParagraph}
 
 
@@ -706,24 +703,39 @@ You can also use the rules found on this web page to add a bit more flair:
 
 If you want something a bit more involved, you can run shops as their own NPC or monster.\par
 
+\begin{emphasisParagraph}
+	When you think about it, a business is really an incorporeal monster.
+	It is immune to all types of damage, but receives damage
+	cash flow. It has a set of stats, and takes actions.
+	It can be competed with, and it can go bankrupt.
+\end{emphasisParagraph}
+
 \begin{DndMonster}[width=.5\textwidth - 8pt]{Shop}
-	\DndMonsterType{Construct (Business), lawful evil}
+	\DndMonsterType{Construct (Business), incorporeal, lawful evil}
 	% Actions
 	\DndMonsterSection{Stats}
 	\DndMonsterAction{Daily Cost (from DMG)}
 	\hfill 2 gp
 	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
-	\hfill 180 gp
-	\DndMonsterAction{Competitiveness (analogous to the Attack Bonus)}
+	\hfill 180 / 180 gp
+	\DndMonsterAction{Competitiveness Bonus (analogous to the Attack Bonus)}
 	\hfill +2
 	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
-	\hfill $1d4$
+	\hfill $ 1d6 $
+	\DndMonsterAction{Proficiency to run}
+	\hfill Charisma (Persuasion)
 
 	\DndMonsterSection{Costs}
-	Every month, the total cost (30 x daily cost) is subtracted
+	Every month, the total monthly cost (30 x total daily cost) is subtracted
 	from the paid-in capital, before the profit roll.
 	If the paid-in capital goes down to 0, the shop goes bankrupt,
-	and there is nothing to recuperate.
+	and there is nothing to recuperate.\par
+
+	The daily cost includes the salary of one skilled worker, as described in the PHB.
+	The cost does not include the rent.
+	Everything here is written with the assumption that the player owns the place.
+	However, if the player rents the place, add the rent to the daily cost.
+	Both the value of the property and the rent are left to the DM to decide.\par
 
 	% Actions
 	\DndMonsterSection{Actions}
@@ -731,7 +743,7 @@ If you want something a bit more involved, you can run shops as their own NPC or
 
 	\DndMonsterAction{Make Profit}
 	This is only possible if there are no competitors.
-	Roll $d20$ and add the competitiveness bonus against DC 10.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
 	If you pass, roll for profit, and make profit equal to the roll
 	times 30 gp. The gold can be used to replenish the capital,
 	and is paid to the shop owner if it is higher than the max capital.
@@ -751,9 +763,9 @@ If you want something a bit more involved, you can run shops as their own NPC or
 	(Multiply the roll outcome by 90 rather than 30.)
 	The loser actually loses amount equal to the roll times 30.
 
-
 	\DndMonsterAction{Replenish Capital}
-	The owner can increase the paid-in capital by paying gold to the shop.
+	As a bonus action, the business owner can increase
+	the paid-in capital by paying gold to the shop.
 	This cannot go over the max allowed paid-in capital.
 	Note that paid-in capital cannot be converted to GP for the owner,
 	this is more like inventory or assets, necessary for profit generation.
@@ -761,21 +773,43 @@ If you want something a bit more involved, you can run shops as their own NPC or
 
 \end{DndMonster}
 
-\subsection{At the Helm}
+\begin{DndSidebar}[float=!b]{Calculations}
+% \tocside{Behold the DndSidebar!}
+	The profit roll $1d6$ and the DC 12 is chosen for compatibility with
+	the ``Running a Business'' rules on page 129 of the DMG 2014.
+	They yield very similar expected values, but the distribution is different
+	and success depends on the skill of the PC.
+	Overall, I wrote the rules keeping consistency in mind with the D\&D economy.
+\end{DndSidebar}
+
+
+\subsection{Cost \& Profit}
+According to the DMG, the cost of a shop is based on one employee, whose
+salary of 2gp per day. This assumes that there are no rental costs.\par
+
+I also created these rules with the assumption that the player owns the shop.
+In the long run, the shop is not expected to be profitable unless
+the PC is constantly running the business.
+To make a ``shop'' profitable, the player needs to
+add ``product lines'' from the section below.
+This facilitates plot hooks, and the challenge of keeping the business profitable is part of the fun.\par
+
+If the player wants to be running a business with rent, this will increase the challenge.\par
+
+Finally, it is possible to create businesses with different combinations of profitability and cost.
+Use the tables form the subsections ``Different Types of Businesses'' and ``Different Sizes of Businesses'' to create a business
+that fits the player's vision. Some combinations are going to be easier to run and will turn into a steady source of income, and others will be more useful for adventures and plot hooks.\par
+
+\subsection{At the Helm: Personally Running the Business}
 If the owner of the shop spends majority of the month at the shop or the business,
-they can add their relevant skill bonus instead of the shop's bonus.
+they can add their relevant skill bonus to the business' competitiveness bonus.
 The relevant skill for a merchant is Cha (Persuasion); for a magic shop,
 it is Int (Arcana), and for smiths and other trades, it is the relevant tool proficiency.
+In other words, the total roll for the month is a proficiency check for the player,
+with the additional bonus coming from the shop.\par
 
-\subsection{Paid-in Capital \& Cost}
-According to the DMG, the cost of a shop is based on one employee, whose
-salary if 1gp per day. This leaves the rest of the cost to the rent of the
-shop.\par
-
-Paid-in capital is set when starting the businss, and the player character
-has to pay this money. This cannot be recuperated. The higher this value,
-the more difficult it is for competitors to outcompete the business.
-This is set by the DM, depending on the kind of shop,
+Typically, henchmen and skilled workers cannot make this roll. If there is an NPC at the shop,
+their salary should be 5gp per day or more, depending on the level of the NPC.
 
 \subsection{Competition}
 If the business has no competitors, it just makes profit.
@@ -793,25 +827,89 @@ market player, run this as a ``Company'' - also see below.
 A business can hold as many lines as equal to its competitiveness bonus.
 Think of these as being analogous to items of a character.\par
 
-To onboard a product line, the shop owener has go through a quest, or
+To onboard a product line, the shop owner has go through a quest, or
 actively search for an opportunity. They then have to pay the
-capital requirements
+capital requirements.\par
+
+% TODO: Rewrite to simplify.
 
 \subsubsection{Specialty Goods}
 
-% TODO
+Provides a niche advantage in the market.\par
+
+\begin{DndComment}[color=bgtan2018]{}
+	\DndMonsterSection{Specialty Goods}
+	\DndMonsterType{Product Line}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 60 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill +2
+	\DndMonsterAction{Additional Profit Die / Bonus}
+	\hfill $1d4$
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 60 gp
+\end{DndComment}
+
+
+Hook: Rumors spread that a guild plans to copy your unique product line.\par
+
 
 \subsubsection{Luxury Line}
 
-% TODO
+High-margin product line that increases profitability, but risks reduced demand.\par
+
+\begin{DndComment}[color=bgtan2018]{}
+	\DndMonsterSection{Luxury Line}
+	\DndMonsterType{Product Line}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 180 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill ...
+	\DndMonsterAction{Additional Profit Die / Bonus}
+	\hfill $1d6$
+\end{DndComment}
+
+
+Hook: Access to rare imports is blocked—can the business secure the supply chain?\par
+
 
 \subsubsection{Discount Line}
 
-% TODO
+Mass-market strategy that ensures constant sales, but invites competition.\par
+
+\begin{DndComment}[color=bgtan2018]{}
+	\DndMonsterSection{Discount Line}
+	\DndMonsterType{Product Line}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 60 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill +4
+	\DndMonsterAction{Additional Profit Die / Bonus}
+	\hfill ...
+\end{DndComment}
+
+Hook: Rivals spread rumors that your goods are low quality.\par
+
 
 \subsubsection{Essential Service}
 
-% TODO
+Resilient product line that guarantees staying power, but limited growth.\par
+
+\begin{DndComment}[color=bgtan2018]{}
+	\DndMonsterSection{Essential Service}
+	\DndMonsterType{Product Line}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 60 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill ...
+	\DndMonsterAction{Additional Profit Die / Bonus}
+	\hfill $+1$
+\end{DndComment}
+
+
+
+Hook: A crisis (drought, war, festival) spikes demand—can the business keep up?\par
+
 
 \subsubsection{Exclusive Contract}
 Guarantees a profit every month. However, if the patron withdraws support,
@@ -823,40 +921,162 @@ Note that the capital requirements increase the maximum paid-in capital,
 and can be useful for protecting the business.
 (Or disastrous if the patron pulls support at the wrong time.)\par
 
-\begin{DndMonster}[width=.5\textwidth - 8pt]{Exclusive Contract}
-	\DndMonsterType{Product Line: Exclusive Contract}
-%	\DndMonsterSection{Stats}
+
+% \begin{DndReadAloud}
+%   As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
+% \end{DndReadAloud}
+
+\begin{DndComment}[color=bgtan2018]{}
+	% \DndMonsterType{Product Line}
+	\DndMonsterSection{Exclusive Contract}
+	\DndMonsterType{Product Line}
 	\DndMonsterAction{Additional Capital Requirements}
 	\hfill 45 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill ...
 	\DndMonsterAction{Additional Profit Die}
 	\hfill $1d4 + 1$
-\end{DndMonster}
+\end{DndComment}
+
+% The |DndSidebar| is not breakable and is best used floated toward a page corner as it is below.
+
+% \begin{DndSidebar}[float=!b]{Behold the DndSidebar!}
+% \tocside{Behold the DndSidebar!}
+%   The |DndSidebar| is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+
+%   Use the |\tocside{title}| command to create an entry in the table of contents, if you want.
+% \end{DndSidebar}
 
 Hook: The patron may demand favors, errands, or loyalty.\par
 
 The capital requirements and the additional profit die can be set by the DM.
 For example, a guaranteed government contract could look like the following:
 
-\begin{DndMonster}[width=.5\textwidth - 8pt]{Government Contract}
-	\DndMonsterType{Product Line: Exclusive Contract}
-%	\DndMonsterSection{Stats}
+\begin{DndComment}[color=bgtan2018]{}
+	% \DndMonsterType{Product Line}
+	\DndMonsterSection{Government Contract}
+	\DndMonsterType{Product Line}
 	\DndMonsterAction{Additional Capital Requirements}
 	\hfill 120 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill ...
 	\DndMonsterAction{Additional Profit Die}
-	\hfill $1$
-\end{DndMonster}
+	\hfill $+2$
+\end{DndComment}
 
-This brings in 30 gp a month, guaranteed, but requires a high level of capital.
+
+This brings in 60 gp a month, guaranteed, but requires a high level of capital.
+
+Hooks: The government may demand favors, errands, or loyalty.
+The player may be forced to bribe officials, or navigate bureaucratic red tape.\par
 
 \subsubsection{Original Design}
 
-% TODO: Roll for a new line: Charisma / Cost / Originality ? Or Capital / Competitiveness / Profit ?
+The player spends some time to create a new product line.
+This involves rolling a tool proficiency check, such as Jeweller's Tools, Smith's Tools, or
+Alchemist's Supplies, or a relevant proficiency check.
+
+% TODO: Map Cost & Originality to Compatitiveness
+% TODO: Map Charisma to Profit Die.
 
 \subsubsection{Illegal Side Hustle}
 
-% TODO
+\begin{DndComment}[color=bgtan2018]{}
+	% \DndMonsterType{Product Line}
+	\DndMonsterSection{Illegal Side Hustle}
+	\DndMonsterType{Product Line}
+	\DndMonsterAction{Additional Capital Requirements}
+	\hfill 60 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill +2
+	\DndMonsterAction{Additional Profit Die}
+	\hfill $1d6$
+\end{DndComment}
 
-\subsection{Different Types of Shops}
+Hook: Risk of legal trouble, raids, or moral dilemmas.\par
+
+\subsection{Different Types of Businesses}
+
+The ``Shop'', as described in the DMG and here, is just one type of business.
+Here is a set of rules to create other types of businesses.
+
+\begin{emphasisParagraph}
+	To create a new business, combine the type of business with the location to determine
+	the relevant proficiency, the paid-in capital, the daily cost,
+	and the profit die.
+\end{emphasisParagraph}
+
+As a rule of thumb, the type of business changes the proficiency roll required when the owner is running the business,
+as well as the labour costs and the paid-in capital.
+Location changes the profit die and the daily cost of rent.\par
+
+On top of this, the DM can change the daily cost or the paid-in capital for additional storytelling and mini-games.
+For instance, preparing three maps for three different shops and
+giving all of them a different bonus can be a great way to keep the
+players engaged.\par
+
+The DM can also introduce events or hooks related to the business,
+such as a rival shop opening nearby, a sudden increase in demand for a product,
+a heist targeting the shop's inventory, a supply chain disruption,
+a unique opportunity to expand the business with a product line,
+a criminal organization trying to extort payments or local officers
+trying to collect bribes.\par
+
+Use the following table for the relevant proficiency for different types of businesses.
+
+\begin{DndTable}[header=Business Type]{Xrrr}
+	Business Type	&	Proficiency & Cost & Capital \\
+	Shop	&	Cha (Persuasion) & 2 gp & 180 gp \\
+	Magic Shop	&	Int (Arcana) & 2 gp & 20000 gp \\
+	Smithy	&	Str (Smith's Tools) & 2 sp & 240 gp \\
+	Bakery	&	Int (Cook's Utensils) & 2 gp & 240 gp \\
+	Alchemist	&	Int (Alchemist's Supplies) & 2 sp & 500 gp \\
+	Tavern	&	Int (Brewer's Supplies) & 2 gp & 300 gp \\
+	Inn & Int (Brewer's Supplies) & 5 gp & 800 gp \\
+	Restaurant	&	Int (Cook's Utensils) & 2 gp & 400 gp \\
+	Market Stall & Cha (Persuasion) & 0 gp & 30 gp \\
+	Jeweller & Dex (Jeweler's Tools) & 2 gp & 1000 gp \\
+	Carpenter & Str (Carpenter's Tools) & 2 gp & 120 gp \\
+	% Large Market & Cha (Persuasion) \\
+	% Large Competitor & Cha (Persuasion) \\
+\end{DndTable}
+
+You can also consider having larger and expanded version of each business.
+Each skilled worker will require 2gp a day, whereas untrained workers will require 2sp a day.
+Hiring experienced experts may cost even more at 2gp.
+For instance, a large restaurant may have a head chef (3gp a day),
+two sous chefs (2gp a day each), and two kitchen hands (2sp a day each),
+and three wait staff (2sp a day each), for a total of 8gp a day.\par
+
+I listed the Smithy and the Alchemist as having a cost of 2sp a day,
+because I imagined both of them as having apprentices.
+Feel free to change that as needed.\par
+
+\subsection{Different Locations}
+
+To change a business to an upscale location, increase the daily cost by 50\%,
+the paid-in capital by 50\%, and the profit die to $1d6$.
+The competitiveness bonus remains the same.\par
+
+Typically, cities are more profitable because of foot traffic,
+and major junctions are more profitable.
+Use the following table to decide on a location and the profit die.
+
+Use the following table as a guide to determine the profit die and the cost of rent based on the location.
+
+\begin{DndTable}[header=Location]{Xrr}
+	Location	&	Profit Die \\
+	Small Village	&	$1d4$ \\
+	Town / Crossroads	&	$1d6$ \\
+	City	&	$1d8$ \\
+	Major City / Capital & $1d10$ \\
+	Major Trade Hub & $1d12$ \\
+\end{DndTable}
+
+Major trade hubs are places like Waterdeep, Baldur's Gate, or Neverwinter in Forgotten Realms,
+or Sharn in Eberron. There is supposed to just two or three of these in a typical campaign setting.
+
+\subsection{Example Businesses}
 
 % TODO: Smithy
 
@@ -866,27 +1086,17 @@ This brings in 30 gp a month, guaranteed, but requires a high level of capital.
 
 % TODO: Alchemist
 
+% TODO: Tavern
+
+% TODO: Restaurant
+
 % TODO: Market
 
 % TODO: Large Market
 
 % TODO: Large Competitor
 
-Typically, cities are more profitable because of foot traffic,
-and major junctions are more profitable.
-Use the following table to decide on a location and the profit die.
-
-
-% TODO: Minigame: roll to create shops, ask the player if they want to purchase them.
-
-Either use the following table as a guide, or roll $3d6$ to determine \emph{Profit Bonus}
-
-\subsection{Normal Times}
-You pay the cost of a shop, and you pay into the capital to start the business and keep it from bankruptcy.
-
-Every month, roll for profit. Add the result to the
-
-
+% TODO: Explain the costs, go over them, check against DM's guide.
 
 \subsection{Empty Business Sheet}
 
@@ -909,13 +1119,7 @@ Every month, roll for profit. Add the result to the
 \end{DndMonster}
 
 
-\subsection{Events \& Hooks}
-
-A shop that the player values is a great way to use hooks into a large number of adventures.
-It will be way more impactful for the player if it is their own income that got distrupted by bandits,
-or if an employee NPC that they have had for a while gets kidnapped, or betrays them.
-To find a new employee, they need to interview. See the \nameref{sec:job_interview} section;
-this also provides a mechanic for the player being deceived about the skill or th intention of the NPC.\par
+\subsection{NPC Events \& Hooks}
 
 
 Use the following either as a random table whenever you want to introduce a new encounter, or as inspiration to connect to adventures.
@@ -932,17 +1136,28 @@ If the shipments do not come in, the shop cannot generate any revenue.\par
 	6	&	If there is increased competition, it ends. Otherwise, nothing happens.\\
 \end{DndTable}
 
-\paragraph*{Potential hooks \& extra challenges}
-% The shop is attacked and merchandize stolen.
-% Their shipments stop.
-% The player may try to become a monopoly. (All checks pass automatically without needing to roll.)
-% Opportunities to make extra money by selling unique items / special orders.
-
 
 \subsection{Playtest Notes}
 
+I am still actively developing this mechanic, and testing it in a campaign. I would love to hear ideas and feedback.\par
+
 \section{Networking}
 
+\begin{emphasisParagraph}
+	Networking is to answer two important questions:
+	Who do you know, and who knows you?
+\end{emphasisParagraph}
+
+When faced with a new NPC, a player can always ask if they know them, or somebody who knows them.
+Similarly, if they go to a new location, they can ask if they know anybody there, or somebody who knows somebody there.
+It may break immersion if the response is always a ``no''.
+To avoid this, we let the player roll to see if they know the NPC, or somebody who knows them.
+This is a Charisma check.
+The DC is based on the location of the player and the organizations that they are a member of.
+Here is the DC table:
+
+\begin{DndTable}[header=Networking DC]{Xr}
+\end{DndTable}
 % TODO: Roll Cha to find out if people remember you. DC based on time passed.
 
 % TODO: Network as an NPC
@@ -959,13 +1174,24 @@ In almost all of the computer games with boss battles, you have to save and load
 What I am trying to get at is: preparing for the battle can be part the fun.\par
 
 \begin{emphasisParagraph}
-	Preparing for the battle can be part of the fun.
+	In the novels and the game, Geralt of Rivia always prepares for a monster hunt.
+	He reads up on the monster, prepares potions, oils and bombs,
+	and sometimes even sets up traps.
+	He does not just go in blind.
 \end{emphasisParagraph}
 
 \paragraph*{Cue the players}
 As GM, consider using the following sentence: ``you will all die if you go into the battle without preparation''.
 If possible, have an NPC make this very clear, or if you can, kill an NPC that they know to be strong and powerful.
 Honestly prepare a boss that is twice as powerful as usual, or use the mechanic from \nameref{chap:d20_real_combat}.\par
+
+\begin{emphasisParagraph}
+	D\&D 5e rules have everything you need to make a battle deadly when you don't know what you are facing,
+	and a deadly battle is a great motivator to prepare.
+	Put in a strong boss, perhaps let them escape once, or make it clear that they will die if they go in unprepared.
+	The strong boss is much easier to deal with when you know its vulnerabilities,
+	or if you can set up a trap.
+\end{emphasisParagraph}
 
 \paragraph*{Doing Research}
 
@@ -1073,8 +1299,6 @@ I am striving to create realism, and give the player a choice.
 
 \paragraph{Cheating}
 \subsection{Slots}
-
-\paragraph{Slots: Realistic Odds and Payoffs}
 
 \paragraph{Slots: Realistic Odds and Payoffs}
 
@@ -1187,7 +1411,7 @@ The purpose of this mechanic is give incentive to players to prepare for such an
 
 % TODO: Add rule for false appearance: The difficulty to spot is DC 20 + the monster's CR or the spellcaster's spellcasting abilty.
 
-\chapter{Conflict Against Natural Forces}
+\chapter{Conflict Against Nature}
 \section{Firefighting \& Spread Mechanic}
 
 In D\&D, we have Fire Elementals, a monster.
@@ -1281,6 +1505,7 @@ This type of spread-on-hit mechanic can be extended to other threats, such as oo
 \section{Cities as Monsters}
 % TODO: Write the stat blocks as a gargantuan swarm.
 \section{Governments as Monsters}
+\section{Inflation}
 
 
 
