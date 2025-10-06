@@ -606,83 +606,6 @@ Otherwise, the rolling gets tedious very quickly.
 
 
 
-\section{Job Interview}
-\label{sec:job_interview}
-
-% TODOL Take out this section entirely? Or simplify and move to the bottom?
-
-Player can be taking the interview, or interviewing an NPC --- this mechanic allows for both.\par
-
-\subsection{Setup}
-\begin{enumerate}
-  \item \textbf{Required Skill.} The interviewer designates one skill (e.g., proficiency with Artisan’s Tools) that’s relevant to the job.
-  \item \textbf{Determine DC.} The interviewer chooses a Difficulty Class (DC). If an NPC conducts the interview, you may run up to three “rounds,” increasing the DC each round to represent tougher questions.
-\end{enumerate}
-
-\subsection{Making the Rolls}
-
-\subsubsection{Interviewee plays straight}
-\subsubsection{Interviewee attempts deception}
-Deception (Cha) vs. DC
-
-% \begin{DndTable}[header=Interview Outcomes]{XrrX}
-% \toprule
-% \textbf{Situation} & \textbf{Interviewee’s Roll} & \textbf{Interviewer’s Roll (Insight)} & \textbf{Outcome} \\
-% \midrule
-% Interviewee plays straight
-% & Required skill vs.\ DC
-% & Insight vs.\ DC
-% &
-% \begin{itemize}
-%   \item Both succeed \(\implies\) Interviewer is convinced of competence.
-%   \item Interviewee succeeds but interviewer fails \(\implies\) Interviewer remains uncertain.
-%   \item Interviewee fails \(\implies\) Interview fails outright.
-% \end{itemize}
-% \\[1ex]
-% Interviewee attempts deception
-% & Deception (Cha) vs.\ DC
-% & Insight (Wis) vs.\ DC (contest)
-% &
-% \begin{itemize}
-%   \item Interviewer rolls higher \(\implies\) Deception uncovered; interview fails.
-%   \item Interviewer rolls lower \(\implies\) Interviewer believes the lie (treat as straight success if DC was met).
-% \end{itemize}
-% \\
-
-% \end{DndTable}
-
-\noindent\textbf{Roll Procedure:}
-\begin{enumerate}
-  \item The player chooses \emph{either} to roll the required skill \emph{or} Deception.
-  \item The interviewer always rolls Insight against the same DC.
-\end{enumerate}
-
-\subsection{Key Benefits}
-\begin{itemize}
-  \item \textbf{Player Agency:} The interviewee chooses how to approach the check (honest skill test vs.\ bluff).
-  \item \textbf{Meaningful Insight Rolls:} Even when PC–NPC roles are reversed, Insight rolls keep everyone uncertain and engaged.
-\end{itemize}
-
-\section{Variant: Reading Intentions}
-Use the same approach whenever a character tries to discern NPC motives:
-\begin{enumerate}
-  \item \textbf{Set a DC} appropriate to how opaque the NPC’s motives are (e.g., DC 12).
-  \item \textbf{Player rolls Insight} vs.\ that DC.
-  \item \textbf{NPC may roll Deception} vs.\ the same DC as a reaction.
-\end{enumerate}
-\begin{itemize}
-  \item Success without contest: PC thinks they understand the NPC.
-  \item NPC’s Deception beats Insight: PC is misled, even if they succeeded on their roll.
-\end{itemize}
-
-\section{Playtest Notes}
-\begin{itemize}
-  \item \textbf{Unplaytested.} Please try this at your table and share any feedback on pacing, balance, and player engagement.
-\end{itemize}
-
-\section{Future Work}
-At present, no planned revisions—but open to community suggestions!
-
 \section{Running a Business}
 
 \begin{emphasisParagraph}
@@ -712,20 +635,20 @@ If you want something a bit more involved, you can run shops as their own NPC or
 
 \begin{DndMonster}[width=.5\textwidth - 8pt]{Shop}
 	\DndMonsterType{Construct (Business), incorporeal, lawful evil}
-	% Actions
+	\DndMonsterAction{Location}
+	\hfill Town or a crossroads
+	\DndMonsterAction{Proficiency to run}
+	\hfill Charisma (Persuasion)
+
 	\DndMonsterSection{Stats}
-	\DndMonsterAction{Daily Cost of Rent (from DMG)}
-	\hfill 1 gp
-	\DndMonsterAction{Daily Labor Cost (from DMG)}
-	\hfill 1 gp
+	\DndMonsterAction{Daily Cost (from DMG)}
+	\hfill 2 gp
 	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
 	\hfill 180 / 180 gp
 	\DndMonsterAction{Competitiveness Bonus (analogous to the Attack Bonus)}
 	\hfill +2
 	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
 	\hfill $ 1d6 $
-	\DndMonsterAction{Proficiency to run}
-	\hfill Charisma (Persuasion)
 
 	\DndMonsterSection{Costs}
 	Every month, the total monthly cost (30 x total daily cost) is subtracted
@@ -824,6 +747,14 @@ for either ``Market'' or a ``Large Market'' as below.
 Alternatively, if there is one strong
 market player, run this as a ``Company'' - also see below.
 
+\subsection{Hiring}
+
+Consider looking at the interview section in \nameref{subsec:job_interview}
+for an additional minigame.\par
+
+The DM can come up with three candidates, some at least one of them may try to deceive the player about their skill.
+The player will likely have doubts about whether they chose the right person or not, just like in real life.\par
+
 \subsection{Product Lines}
 
 A business can hold as many lines as equal to its competitiveness bonus.
@@ -833,8 +764,6 @@ To onboard a product line, the shop owner has go through a quest, or
 actively search for an opportunity. They then have to pay the
 capital requirements.\par
 
-% TODO: Rewrite to simplify.
-
 \subsubsection{Specialty Goods}
 
 Provides a niche advantage in the market.\par
@@ -842,14 +771,8 @@ Provides a niche advantage in the market.\par
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Specialty Goods}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 60 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill +2
-	\DndMonsterAction{Additional Profit Die / Bonus}
-	\hfill $1d4$
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 60 gp
+	On a roll of natural 20 on the profit roll, add 10\% of the paid-in capital to the profit.
+	(Really meaningful for magic shops.)
 \end{DndComment}
 
 
@@ -857,6 +780,8 @@ Hook: Rumors spread that a guild plans to copy your unique product line.\par
 
 
 \subsubsection{Luxury Line}
+
+% TODO: Rewrite to simplify.
 
 High-margin product line that increases profitability, but risks reduced demand.\par
 
@@ -877,6 +802,8 @@ Hook: Access to rare imports is blocked—can the business secure the supply cha
 
 \subsubsection{Discount Line}
 
+% TODO: Rewrite to simplify.
+
 Mass-market strategy that ensures constant sales, but invites competition.\par
 
 \begin{DndComment}[color=bgtan2018]{}
@@ -894,6 +821,8 @@ Hook: Rivals spread rumors that your goods are low quality.\par
 
 
 \subsubsection{Essential Service}
+
+% TODO: Rewrite to simplify.
 
 Resilient product line that guarantees staying power, but limited growth.\par
 
@@ -914,6 +843,10 @@ Hook: A crisis (drought, war, festival) spikes demand—can the business keep up
 
 
 \subsubsection{Exclusive Contract}
+
+% TODO: Rewrite to simplify.
+
+
 Guarantees a profit every month. However, if the patron withdraws support,
 the additional paid-in capital disappears, and is nor recuperated, and
 the additional profit goes away. This can happen at the DM's discretion,
@@ -974,6 +907,8 @@ The player may be forced to bribe officials, or navigate bureaucratic red tape.\
 
 \subsubsection{Original Design}
 
+% TODO: Rewrite to simplify.
+
 The player spends some time to create a new product line.
 This involves rolling a tool proficiency check, such as Jeweller's Tools, Smith's Tools, or
 Alchemist's Supplies, or a relevant proficiency check.
@@ -982,6 +917,8 @@ Alchemist's Supplies, or a relevant proficiency check.
 % TODO: Map Charisma to Profit Die.
 
 \subsubsection{Illegal Side Hustle}
+
+% TODO: Rewrite to simplify.
 
 \begin{DndComment}[color=bgtan2018]{}
 	% \DndMonsterType{Product Line}
@@ -1029,9 +966,9 @@ Use the following table for the relevant proficiency for different types of busi
 \begin{DndTable}[header=Business Type]{Xrrr}
 	Business Type	&	Proficiency & Cost & Capital \\
 	Shop	&	Cha (Persuasion) & 2 gp & 180 gp \\
-	Magic Shop	&	Int (Arcana) & 2 gp & 20000 gp \\
-	Smithy	&	Str (Smith's Tools) & 2 sp & 240 gp \\
-	Bakery	&	Int (Cook's Utensils) & 2 gp & 240 gp \\
+	Magic Shop	&	Int (Arcana) & 5 gp & 5000 gp \\
+	Smithy	&	Str (Smith's Tools) & 5 sp & 120 gp \\
+	Bakery	&	Int (Cook's Utensils) & 5 sp & 120 gp \\
 	Alchemist	&	Int (Alchemist's Supplies) & 2 sp & 500 gp \\
 	Tavern	&	Int (Brewer's Supplies) & 2 gp & 300 gp \\
 	Inn & Int (Brewer's Supplies) & 5 gp & 800 gp \\
@@ -1080,11 +1017,134 @@ or Sharn in Eberron. There is supposed to just two or three of these in a typica
 
 \subsection{Example Businesses}
 
-% TODO: Smithy
+The blacksmith below follows the rules above.
+The ``pad-in capital'' is 120 gp, meaning that it is a bit expensive to open a blacksmith,
+this is the cost of all the equipment.
+The 5 sp operating costs are actually 2 sp for to an apprentice, and 3 sp for materials.
+Something like a blacksmith could be in every village, so entry barriers are relatively low.\par
+
+A potential hook is that the apprentice opens up their own shop, at the other end of the same town, and competition ensues.\par
+
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Smithy}
+	\DndMonsterType{Construct (Business), corporeal, neutral}
+
+	\DndMonsterAction{Proficiency to run}
+	\hfill Strength (Smith's Tools)
+	\DndMonsterAction{Location}
+	\hfill Town / Crossroads
+
+	\DndMonsterSection{Stats}
+	\DndMonsterAction{Daily Cost (from DMG)}
+	\hfill 5 sp
+	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
+	\hfill 240 / 240 gp
+	\DndMonsterAction{Competitiveness Bonus (analogous to the Attack Bonus)}
+	\hfill +0
+	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
+	\hfill $1d6$
+
+	\DndMonsterSection{Costs}
+	Every month, the total monthly cost (30 x total daily cost) is subtracted
+	from the paid-in capital, before the profit roll.
+	If the paid-in capital goes down to 0, the smithy goes bankrupt,
+	and there is nothing to recuperate.\par
+
+	The daily cost includes the salary of one apprentice (2 sp/day).
+	The cost does not include rent, as the smithy is assumed to be owned.
+	If the player rents the property, add the rent to the daily cost.
+	The value of the property and rent are left to the DM to decide.\par
+
+	\DndMonsterSection{Actions}
+	The smithy takes one action every month.
+
+	\DndMonsterAction{Make Profit}
+	This is only possible if there are no competitors.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	If successful, roll for profit, and make profit equal to the roll
+	times 30 gp. The gold can replenish the paid-in capital or be retained by the owner.
+
+	\DndMonsterAction{Collude}
+	This is possible only if there is a competitor, and both agree to collude.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	The competitor also rolls. Profits are combined and split evenly.
+
+	\DndMonsterAction{Compete}
+	This is possible only if there is a competitor. If no collusion, they compete.
+	Roll $d20$ and add the competitiveness bonus.
+	The competitor also rolls.
+	The winner rolls for profit, receiving twice the normal gp (multiply by 90 rather than 30).
+	The loser loses an amount equal to the roll times 30.
+
+	\DndMonsterAction{Replenish Capital}
+	As a bonus action, the owner can pay gold to increase
+	the paid-in capital, up to the max allowed.
+	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
+\end{DndMonster}
 
 % TODO: Bakery
 
-% TODO: Magic Shop
+A magic shop is really difficult to open, since the inventory must include magic items and scrolls, and potentially potions, all of which are expensive.
+This is reflected in the high paid-in capital.
+The daily cost is also high, because the shop needs a skilled worker, and the inventory needs to replenished every month.
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Magic Shop}
+	\DndMonsterType{Construct (Business), incorporeal, lawful neutral}
+
+	\DndMonsterAction{Proficiency to run}
+	\hfill Intelligence (Arcana)
+	\DndMonsterAction{Location}
+	\hfill Major City
+
+	\DndMonsterSection{Stats}
+	\DndMonsterAction{Daily Cost (from DMG)}
+	\hfill 5 gp
+	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
+	\hfill 5000 / 5000 gp
+	\DndMonsterAction{Competitiveness Bonus (analogous to the Attack Bonus)}
+	\hfill +2
+	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
+	\hfill $1d10$
+
+	\DndMonsterSection{Costs}
+	Every month, the total monthly cost (30 x total daily cost) is subtracted
+	from the paid-in capital, before the profit roll.
+	If the paid-in capital goes down to 0, the magic shop goes bankrupt,
+	and there is nothing to recuperate.\par
+
+	The daily cost includes the salaries of one apprentice mage (2 gp/day),
+	and the cost of replenishing basic inventory.
+	The cost does not include rent, as the shop is assumed to be owned.
+	If the player rents the property, add the rent to the daily cost.
+	The value of the property and rent are left to the DM to decide.\par
+
+	\DndMonsterSection{Actions}
+	The magic shop takes one action every month.
+
+	\DndMonsterAction{Make Profit}
+	This is only possible if there are no competitors.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	If successful, roll for profit, and make profit equal to the roll
+	times 30 gp. The gold can replenish the paid-in capital or be retained by the owner.
+
+	\DndMonsterAction{Collude}
+	This is possible only if there is a competitor, and both agree to collude.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	The competitor also rolls. Profits are combined and split evenly.
+
+	\DndMonsterAction{Compete}
+	This is possible only if there is a competitor. If no collusion, they compete.
+	Roll $d20$ and add the competitiveness bonus.
+	The competitor also rolls.
+	The winner rolls for profit, receiving twice the normal gp (multiply by 90 rather than 30).
+	The loser loses an amount equal to the roll times 30.
+
+	\DndMonsterAction{Replenish Capital}
+	As a bonus action, the owner can pay gold to increase
+	the paid-in capital, up to the max allowed.
+	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
+\end{DndMonster}
+
 
 % TODO: Alchemist
 
@@ -1252,6 +1312,34 @@ However, the expertise dice from earlier in this book may apply and stacks. (\na
 \subsection{Making An Impression}
 \subsection{Public Speeches}
 \subsection{Dating}
+\subsection{Job Interview}
+\label{subsec:job_interview}
+
+During a job interview, the interviewer wants to find out the skill bonus of the candidate.
+The candidate wants to show the skill bonus if they are good, or hide it if they are not so good.
+Player can be taking the interview, or interviewing an NPC --- this mechanic allows for both.\par
+
+The interviewer and the candidate roll for an contested roll.
+The interviewer rolls Insight (Wisdom), and the candidate rolls either the relevant skill, or Deception (Charisma).
+If the interviewer wins, the interviewer learns the candidate's skill bonus, and whether they roll Deception (Charisma) or the relevant skill.
+If the candidate wins, the outcome depends on whether they rolled Deception (Charisma) or the relevant skill.
+If they rolled Deception (Charisma), the interviewer thinks that the candidate's skill bonus is their Deception bonus.
+If they rolled the relevant skill, the interviewer thinks that the candidate's skill bonus is actually higher than it is, by the difference of the rolled result.\par
+
+Here is a helpful table to summarize:
+\begin{DndTable}[header=Job Interview Outcomes]{llX}
+	Interviewer Wins?	&	Candidate Roll	&	Interviewer's Conclusion \\
+	No & Deception (Cha) & Candidate's skill bonus is their Deception bonus. \\
+	No & Relevant Skill & Candidate's skill bonus is higher than it actually is, by the difference of the rolled result. \\
+	Yes & Deception (Cha) & Candidate's skill bonus is their actual skill bonus, and the candidate was trying to deceive. \\
+	Yes & Relevant Skill & Candidate's skill bonus is their actual skill bonus, and the candidate was not trying to deceive. \\
+\end{DndTable}
+
+And here is an example where the candidate is being tested on Persuasion, where their bonus is +5.
+The interviewer has an Insight bonus of +3. The candidate has a bonus of +6 on Deception (Cha).
+
+% TODO: Example
+`'
 
 \chapter{Conflict Against NPCs}
 \section{Chases}
