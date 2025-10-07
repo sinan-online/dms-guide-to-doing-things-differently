@@ -762,42 +762,58 @@ Think of these as being analogous to items of a character.\par
 
 To onboard a product line, the shop owner has go through a quest, or
 actively search for an opportunity. They then have to pay the
-capital requirements.\par
+additional capital requirements.\par
+
+Additional capital requirements are given as a percentage of the original paid-in capital.
+When calculating the value, do not add the additional capital requirements from other product lines.
+For example, if the original paid-in capital is 180gp, and the business has a ``Specialty Goods'' product line,
+
+\subsubsection{Custom Orders}
+
+Allows the business to take profitable custom orders.
+
+\begin{DndComment}[color=bgtan2018]{}
+	\DndMonsterSection{Custom Orders}
+	\DndMonsterType{Product Line}
+	On a roll of natural 20 on the profit roll, add 10\% of the initial paid-in capital (before requirements from any product lines are added) to the profit.
+	(Really helpful for businesses with high paid-in capital, like magic shops.)
+	\DndMonsterAction{Additional Requirements}
+	Requires an additional skilled worker, 2 gp per day.
+	Alternatively, the player can take time from adventuring, and run the business personally.
+\end{DndComment}
+
+
 
 \subsubsection{Specialty Goods}
 
-Provides a niche advantage in the market.\par
+Provides a niche advantage in the market.
 
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Specialty Goods}
 	\DndMonsterType{Product Line}
-	On a roll of natural 20 on the profit roll, add 10\% of the paid-in capital to the profit.
-	(Really meaningful for magic shops.)
+	% TODO: Finish this.
+	\DndMonsterAction{Additional Requirements}
 \end{DndComment}
-
 
 Hook: Rumors spread that a guild plans to copy your unique product line.\par
 
 
 \subsubsection{Luxury Line}
 
-% TODO: Rewrite to simplify.
-
-High-margin product line that increases profitability, but risks reduced demand.\par
+High-margin product line that increases profitability, but risks reduced demand.
 
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Luxury Line}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 180 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill ...
-	\DndMonsterAction{Additional Profit Die / Bonus}
-	\hfill $1d6$
+	Increase the profit roll by another die of the same face as the original profit roll.
+	For example, if the original profit roll is $1d6$, it becomes $2d6$.
+	However, the DC to make profit increases by 3, to DC 15.
+	(This does not impact the contested rolls under competition.)
+	\DndMonsterAction{Additional Requirements}
+	Requires additional inventory and rare materials, 5 gp per month.
 \end{DndComment}
 
-
-Hook: Access to rare imports is blocked—can the business secure the supply chain?\par
+Hook: Supply chain disruption threatens the availability of luxury items.\par
 
 
 \subsubsection{Discount Line}
@@ -809,12 +825,10 @@ Mass-market strategy that ensures constant sales, but invites competition.\par
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Discount Line}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 60 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill +4
-	\DndMonsterAction{Additional Profit Die / Bonus}
-	\hfill ...
+	Increases the competitiveness bonus by 4.
+	This bonus stacks with everything else.
+	\DndMonsterAction{Additional Requirements}
+	Requires an additional capital at \%50 of the initial paid-in capital.
 \end{DndComment}
 
 Hook: Rivals spread rumors that your goods are low quality.\par
@@ -822,19 +836,14 @@ Hook: Rivals spread rumors that your goods are low quality.\par
 
 \subsubsection{Essential Service}
 
-% TODO: Rewrite to simplify.
-
 Resilient product line that guarantees staying power, but limited growth.\par
 
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Essential Service}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 60 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill ...
-	\DndMonsterAction{Additional Profit Die / Bonus}
-	\hfill $+1$
+	% TODO: Finish this.
+	\DndMonsterAction{Additional Requirements}
+	Requires an additional capital at \%25 of the initial paid-in capital.
 \end{DndComment}
 
 
@@ -857,21 +866,33 @@ and can be useful for protecting the business.
 (Or disastrous if the patron pulls support at the wrong time.)\par
 
 
+
 % \begin{DndReadAloud}
 %   As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
 % \end{DndReadAloud}
 
 \begin{DndComment}[color=bgtan2018]{}
-	% \DndMonsterType{Product Line}
 	\DndMonsterSection{Exclusive Contract}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 45 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill ...
-	\DndMonsterAction{Additional Profit Die}
-	\hfill $1d4 + 1$
+	This allows the shop to take an extra ``make profit'' action every month.
+	If the roll succeedds, the shop rolls another profit die, and adds it to the profit.
+	The additional profit die has two less faces than the original profit die, to a minimum of $1d4$.
+	See the table below.
+	\DndMonsterAction{Additional Requirements}
+	% TODO: Finish this.
 \end{DndComment}
+
+
+\begin{DndTable}[header=Profit Die \& Additional Profit Die]{Xrr}
+	Original Profit Die	&	Additional Profit Die \\
+	$1d4$	&	$1d4$ \\
+	$1d6$	&	$1d4$ \\
+	$1d8$	&	$1d4$ \\
+	$1d10$	&	$1d6$ \\
+	$1d12$	&	$1d8$ \\
+\end{DndTable}
+
+
 
 % The |DndSidebar| is not breakable and is best used floated toward a page corner as it is below.
 
@@ -888,16 +909,15 @@ The capital requirements and the additional profit die can be set by the DM.
 For example, a guaranteed government contract could look like the following:
 
 \begin{DndComment}[color=bgtan2018]{}
-	% \DndMonsterType{Product Line}
 	\DndMonsterSection{Government Contract}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 120 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill ...
-	\DndMonsterAction{Additional Profit Die}
-	\hfill $+2$
+	This is a derivative of the ``Exclusive Contract'' product line.
+	This allows the shop to take an extra ``make profit'' action every month.
+	If the roll succeedds, instead of rolling another profit die, the shop makes a flat 60 gp profit.
+	\DndMonsterAction{Additional Requirements}
+	Requires an additional capital at \%100 of the initial paid-in capital.
 \end{DndComment}
+
 
 
 This brings in 60 gp a month, guaranteed, but requires a high level of capital.
@@ -1017,6 +1037,8 @@ or Sharn in Eberron. There is supposed to just two or three of these in a typica
 
 \subsection{Example Businesses}
 
+\paragraph{Blacksmith}
+
 The blacksmith below follows the rules above.
 The ``pad-in capital'' is 120 gp, meaning that it is a bit expensive to open a blacksmith,
 this is the cost of all the equipment.
@@ -1035,13 +1057,13 @@ A potential hook is that the apprentice opens up their own shop, at the other en
 	\hfill Town / Crossroads
 
 	\DndMonsterSection{Stats}
-	\DndMonsterAction{Daily Cost (from DMG)}
+	\DndMonsterAction{Daily Cost}
 	\hfill 5 sp
-	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
+	\DndMonsterAction{Paid-in Capital}
 	\hfill 240 / 240 gp
-	\DndMonsterAction{Competitiveness Bonus (analogous to the Attack Bonus)}
+	\DndMonsterAction{Competitiveness Bonus}
 	\hfill +0
-	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
+	\DndMonsterAction{Profit Roll}
 	\hfill $1d6$
 
 	\DndMonsterSection{Costs}
@@ -1082,7 +1104,68 @@ A potential hook is that the apprentice opens up their own shop, at the other en
 	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
 \end{DndMonster}
 
-% TODO: Bakery
+\paragraph{Village Bakery}
+
+% TODO: Finish this.
+
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Village Bakery}
+	\DndMonsterType{Construct (Business), corporeal, neutral}
+
+	\DndMonsterAction{Proficiency to run}
+	\hfill Intelligence (Cook's Utensils)
+	\DndMonsterAction{Location}
+	\hfill Small Village
+
+
+	\DndMonsterSection{Stats}
+	\DndMonsterAction{Daily Cost}
+	\hfill 2 gp
+	\DndMonsterAction{Paid-in Capital}
+	\hfill 240 / 240 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill +1
+	\DndMonsterAction{Profit Roll}
+	\hfill $1d4$
+
+	\DndMonsterSection{Costs}
+	Every month, the total monthly cost (30 x total daily cost) is subtracted
+	from the paid-in capital, before the profit roll.
+	If the paid-in capital goes down to 0, the bakery goes bankrupt,
+	and there is nothing to recuperate.\par
+
+	The daily cost includes the salary of one skilled baker (2 gp/day).
+	The cost does not include rent, as the bakery is assumed to be owned.
+	If the player rents the property, add the rent to the daily cost.
+	The value of the property and rent are left to the DM to decide.\par
+
+	\DndMonsterSection{Actions}
+	The bakery takes one action every month.
+
+	\DndMonsterAction{Make Profit}
+	This is only possible if there are no competitors.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	If successful, roll for profit, and make profit equal to the roll
+	times 30 gp. The gold can replenish the paid-in capital or be retained by the owner.
+
+	\DndMonsterAction{Collude}
+	This is possible only if there is a competitor, and both agree to collude.
+	Roll $d20$ and add the competitiveness bonus against DC 10.
+	The competitor also rolls. Profits are combined and split evenly.
+
+	\DndMonsterAction{Compete}
+	This is possible only if there is a competitor. If no collusion, they compete.
+	Roll $d20$ and add the competitiveness bonus.
+	The competitor also rolls.
+	The winner rolls for profit, receiving twice the normal gp (multiply by 90 rather than 30).
+	The loser loses an amount equal to the roll times 30.
+
+	\DndMonsterAction{Replenish Capital}
+	As a bonus action, the owner can pay gold to increase
+	the paid-in capital, up to the max allowed.
+	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
+\end{DndMonster}
+
+\paragraph{Magic Shop}
 
 A magic shop is really difficult to open, since the inventory must include magic items and scrolls, and potentially potions, all of which are expensive.
 This is reflected in the high paid-in capital.
@@ -1097,13 +1180,13 @@ The daily cost is also high, because the shop needs a skilled worker, and the in
 	\hfill Major City
 
 	\DndMonsterSection{Stats}
-	\DndMonsterAction{Daily Cost (from DMG)}
+	\DndMonsterAction{Daily Cost}
 	\hfill 5 gp
-	\DndMonsterAction{Paid-in Capital (analogous to Max HP)}
+	\DndMonsterAction{Paid-in Capital}
 	\hfill 5000 / 5000 gp
-	\DndMonsterAction{Competitiveness Bonus (analogous to the Attack Bonus)}
+	\DndMonsterAction{Competitiveness Bonus}
 	\hfill +2
-	\DndMonsterAction{Profit Roll (analogous to the Damage Roll)}
+	\DndMonsterAction{Profit Roll}
 	\hfill $1d10$
 
 	\DndMonsterSection{Costs}
@@ -1145,6 +1228,7 @@ The daily cost is also high, because the shop needs a skilled worker, and the in
 	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
 \end{DndMonster}
 
+% TODO: Jeweller
 
 % TODO: Alchemist
 
@@ -1152,9 +1236,13 @@ The daily cost is also high, because the shop needs a skilled worker, and the in
 
 % TODO: Restaurant
 
+\subsubsection{Markets as an NPC}
+
 % TODO: Market
 
 % TODO: Large Market
+
+\subsubsection{Companies as NPCs}
 
 % TODO: Large Competitor
 
@@ -1350,7 +1438,7 @@ After that, each time you take a dash action, you must make a Constitution check
 If the quarry is outside the sight of the pursuers, they escape.\par
 
 This mechanic, combined with the usual combat mechanics, create great chase scenes.
-Make sure to have an enemy that is slightly faster than the group, perhaps using a \emph{Haste} spell.
+Make sure to have an enemy that is slightly faster than the group. Using a \emph{Haste} spell helps in lower levels.
 In response, players may cast spells of their own, such as \emph{Grease}, \emph{Web} or \emph{Hold Person}.
 Alternatively, they can attempt to chase the quarry as far as their Constitution allows.\par
 
@@ -1359,9 +1447,10 @@ Try to create a headstart for a quarry to give characters a challenge, and prefe
 
 All of this should create enough entertainment for a chase scene.
 If required, you can add random events that turn the terrain in front of the characters to difficult terrain, such as apples falling from a cart.\par
-
-
-
+\begin{emphasisParagraph}
+	The chase mechanic in D\&D 5e is excellent.
+	Use it as is, and spice it up with terrain features, spells, and a slightly faster quarry.
+\end{emphasisParagraph}
 % TODO: Explain aerial combat specific issues
 
 \subsection{Aerial Chases}
