@@ -829,6 +829,7 @@ Mass-market strategy that ensures constant sales, but invites competition.\par
 	This bonus stacks with everything else.
 	\DndMonsterAction{Additional Requirements}
 	Requires an additional capital at \%50 of the initial paid-in capital.
+	(This also increases the max paid-in capital, which can be useful for protecting the business.)
 \end{DndComment}
 
 Hook: Rivals spread rumors that your goods are low quality.\par
@@ -844,6 +845,7 @@ Resilient product line that guarantees staying power, but limited growth.\par
 	% TODO: Finish this.
 	\DndMonsterAction{Additional Requirements}
 	Requires an additional capital at \%25 of the initial paid-in capital.
+	(This also increases the max paid-in capital, which can be useful for protecting the business.)
 \end{DndComment}
 
 
@@ -879,7 +881,7 @@ and can be useful for protecting the business.
 	The additional profit die has two less faces than the original profit die, to a minimum of $1d4$.
 	See the table below.
 	\DndMonsterAction{Additional Requirements}
-	% TODO: Finish this.
+	Requires additional inventory and rare materials, 5 gp per month.
 \end{DndComment}
 
 
@@ -913,9 +915,9 @@ For example, a guaranteed government contract could look like the following:
 	\DndMonsterType{Product Line}
 	This is a derivative of the ``Exclusive Contract'' product line.
 	This allows the shop to take an extra ``make profit'' action every month.
-	If the roll succeedds, instead of rolling another profit die, the shop makes a flat 60 gp profit.
+	If the roll succeeds, instead of rolling another profit die, the shop makes a flat 60 gp profit.
 	\DndMonsterAction{Additional Requirements}
-	Requires an additional capital at \%100 of the initial paid-in capital.
+	Requires an additional capital at \%75 of the initial paid-in capital.
 \end{DndComment}
 
 
@@ -930,10 +932,14 @@ The player may be forced to bribe officials, or navigate bureaucratic red tape.\
 % TODO: Rewrite to simplify.
 
 The player spends some time to create a new product line.
-This involves rolling a tool proficiency check, such as Jeweller's Tools, Smith's Tools, or
-Alchemist's Supplies, or a relevant proficiency check.
+This involves three proficiency checks over the course of a month.
+The proficiency is the same as the one used to run the business.
+However, only the businesses with a tool proficiency can use this product line.\par
 
-% TODO: Map Cost & Originality to Compatitiveness
+% TODO: Map Originality to Compatitiveness
+% Originality should yield a bonus to the competitiveness bonus.
+% Charisma should result in increaed profits or more profit rolls.
+% Cost should reduce the daily cost. ?
 % TODO: Map Charisma to Profit Die.
 
 \subsubsection{Illegal Side Hustle}
@@ -941,18 +947,28 @@ Alchemist's Supplies, or a relevant proficiency check.
 % TODO: Rewrite to simplify.
 
 \begin{DndComment}[color=bgtan2018]{}
-	% \DndMonsterType{Product Line}
 	\DndMonsterSection{Illegal Side Hustle}
 	\DndMonsterType{Product Line}
-	\DndMonsterAction{Additional Capital Requirements}
-	\hfill 60 gp
-	\DndMonsterAction{Competitiveness Bonus}
-	\hfill +2
-	\DndMonsterAction{Additional Profit Die}
-	\hfill $1d6$
+	The business takes a second action every month.
+	The DC is 15, and if the roll succeeds,
+	the shop rolls another profit die, and adds it to the profit.
+	The additional profit die has the one higher face than the original profit die, to a maximum of $1d12$.
+	See the table below.
+	\DndMonsterAction{Additional Requirements}
+	No additional requirements, but a great way for the DM to introduce additional plot hooks.
 \end{DndComment}
 
-Hook: Risk of legal trouble, raids, or moral dilemmas.\par
+Hook: Risk of legal trouble, raids, confrontration with criminal elements, or moral dilemmas.\par
+
+Table:
+\begin{DndTable}[header=Profit Die \& Additional Profit Die]{Xrr}
+	Original Profit Die	&	Additional Profit Die \\
+	$1d4$	&	$1d6$ \\
+	$1d6$	&	$1d8$ \\
+	$1d8$	&	$1d10$ \\
+	$1d10$	&	$1d12$ \\
+	$1d12$	&	$1d12$ \\
+\end{DndTable}
 
 \subsection{Different Types of Businesses}
 
