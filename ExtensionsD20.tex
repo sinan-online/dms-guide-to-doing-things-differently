@@ -747,6 +747,16 @@ for either ``Market'' or a ``Large Market'' as below.
 Alternatively, if there is one strong
 market player, run this as a ``Company'' - also see below.
 
+\begin{DndSidebar}[float=!b]{When is Competition, Competition?}
+% \tocside{Behold the DndSidebar!}
+	There are multiple shops around the world, many of each business.
+	A business of the same type in a nearby village, on the other side of the town,
+	or in a different neighborhood of the city is not necessarily a competitor.
+	What we mean here by ``competition'' is a \emph{direct} competitor.
+	This is a business that could
+\end{DndSidebar}
+
+
 \subsection{Hiring}
 
 Consider looking at the interview section in \nameref{subsec:job_interview}
@@ -775,6 +785,7 @@ Allows the business to take profitable custom orders.
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Custom Orders}
 	\DndMonsterType{Product Line}
+	\DndMonsterAction{Benefit}
 	On a roll of natural 20 on the profit roll, add 10\% of the initial paid-in capital (before requirements from any product lines are added) to the profit.
 	(Really helpful for businesses with high paid-in capital, like magic shops.)
 	\DndMonsterAction{Additional Requirements}
@@ -791,8 +802,10 @@ Provides a niche advantage in the market.
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Specialty Goods}
 	\DndMonsterType{Product Line}
-	% TODO: Finish this.
+	\DndMonsterAction{Benefit}
+	Increases the competitiveness bonus by 4.
 	\DndMonsterAction{Additional Requirements}
+	Increases daily cost by 25\%, rounded to the nearest gp.
 \end{DndComment}
 
 Hook: Rumors spread that a guild plans to copy your unique product line.\par
@@ -805,12 +818,13 @@ High-margin product line that increases profitability, but risks reduced demand.
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Luxury Line}
 	\DndMonsterType{Product Line}
+	\DndMonsterAction{Benefit}
 	Increase the profit roll by another die of the same face as the original profit roll.
 	For example, if the original profit roll is $1d6$, it becomes $2d6$.
 	However, the DC to make profit increases by 3, to DC 15.
 	(This does not impact the contested rolls under competition.)
 	\DndMonsterAction{Additional Requirements}
-	Requires additional inventory and rare materials, 5 gp per month.
+	Requires additional inventory and rare materials, 20 gp per month.
 \end{DndComment}
 
 Hook: Supply chain disruption threatens the availability of luxury items.\par
@@ -825,6 +839,7 @@ Mass-market strategy that ensures constant sales, but invites competition.\par
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Discount Line}
 	\DndMonsterType{Product Line}
+	\DndMonsterAction{Benefit}
 	Increases the competitiveness bonus by 4.
 	This bonus stacks with everything else.
 	\DndMonsterAction{Additional Requirements}
@@ -842,15 +857,18 @@ Resilient product line that guarantees staying power, but limited growth.\par
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Essential Service}
 	\DndMonsterType{Product Line}
-	% TODO: Finish this.
+	\DndMonsterAction{Benefit}
+	Decreases the DC to make profit by 3, to DC 9.
+	However, the profit roll is decreased by one die face, to a minimum of $1d4$.
 	\DndMonsterAction{Additional Requirements}
-	Requires an additional capital at \%25 of the initial paid-in capital.
+	Requires an additional capital at \%50 of the initial paid-in capital.
 	(This also increases the max paid-in capital, which can be useful for protecting the business.)
 \end{DndComment}
 
 
 
-Hook: A crisis (drought, war, festival) spikes demand—can the business keep up?\par
+Hook: A crisis (drought, war, festival) spikes demand—can the business keep up?
+A local authority puts a cap on prices.\par
 
 
 \subsubsection{Exclusive Contract}
@@ -876,12 +894,13 @@ and can be useful for protecting the business.
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Exclusive Contract}
 	\DndMonsterType{Product Line}
+	\DndMonsterAction{Benefit}
 	This allows the shop to take an extra ``make profit'' action every month.
 	If the roll succeedds, the shop rolls another profit die, and adds it to the profit.
 	The additional profit die has two less faces than the original profit die, to a minimum of $1d4$.
 	See the table below.
 	\DndMonsterAction{Additional Requirements}
-	Requires additional inventory and rare materials, 5 gp per month.
+	Requires additional inventory and rare materials, 20 gp per month.
 \end{DndComment}
 
 
@@ -913,6 +932,7 @@ For example, a guaranteed government contract could look like the following:
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Government Contract}
 	\DndMonsterType{Product Line}
+	\DndMonsterAction{Benefit}
 	This is a derivative of the ``Exclusive Contract'' product line.
 	This allows the shop to take an extra ``make profit'' action every month.
 	If the roll succeeds, instead of rolling another profit die, the shop makes a flat 60 gp profit.
@@ -949,13 +969,14 @@ However, only the businesses with a tool proficiency can use this product line.\
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Illegal Side Hustle}
 	\DndMonsterType{Product Line}
+	\DndMonsterAction{Benefit}
 	The business takes a second action every month.
 	The DC is 15, and if the roll succeeds,
 	the shop rolls another profit die, and adds it to the profit.
 	The additional profit die has the one higher face than the original profit die, to a maximum of $1d12$.
 	See the table below.
 	\DndMonsterAction{Additional Requirements}
-	No additional requirements, but a great way for the DM to introduce additional plot hooks.
+	No additional requirements, but a great way for the DM to introduce additional plot hooks and just have fun.
 \end{DndComment}
 
 Hook: Risk of legal trouble, raids, confrontration with criminal elements, or moral dilemmas.\par
@@ -1002,7 +1023,7 @@ Use the following table for the relevant proficiency for different types of busi
 \begin{DndTable}[header=Business Type]{Xrrr}
 	Business Type	&	Proficiency & Cost & Capital \\
 	Shop	&	Cha (Persuasion) & 2 gp & 180 gp \\
-	Magic Shop	&	Int (Arcana) & 5 gp & 5000 gp \\
+	Magic Shop	&	Int (Arcana) & 8 gp & 10000 gp \\
 	Smithy	&	Str (Smith's Tools) & 5 sp & 120 gp \\
 	Bakery	&	Int (Cook's Utensils) & 5 sp & 120 gp \\
 	Alchemist	&	Int (Alchemist's Supplies) & 2 sp & 500 gp \\
@@ -1010,7 +1031,7 @@ Use the following table for the relevant proficiency for different types of busi
 	Inn & Int (Brewer's Supplies) & 5 gp & 800 gp \\
 	Restaurant	&	Int (Cook's Utensils) & 2 gp & 400 gp \\
 	Market Stall & Cha (Persuasion) & 0 gp & 30 gp \\
-	Jeweller & Dex (Jeweler's Tools) & 2 gp & 1000 gp \\
+	Jeweller & Dex (Jeweler's Tools) & 5 gp & 1000 gp \\
 	Carpenter & Str (Carpenter's Tools) & 2 gp & 120 gp \\
 	% Large Market & Cha (Persuasion) \\
 	% Large Competitor & Cha (Persuasion) \\
@@ -1244,7 +1265,66 @@ The daily cost is also high, because the shop needs a skilled worker, and the in
 	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
 \end{DndMonster}
 
-% TODO: Jeweller
+\begin{DndMonster}[width=.5\textwidth - 8pt]{Jeweller}
+	\DndMonsterType{Construct (Business), corporeal, neutral}
+
+	\DndMonsterAction{Proficiency to run}
+	\hfill Dexterity (Jeweller's Tools)
+	\DndMonsterAction{Location}
+	\hfill Major Trade Hub
+
+	\DndMonsterSection{Stats}
+	\DndMonsterAction{Daily Cost}
+	\hfill 5 gp
+	\DndMonsterAction{Paid-in Capital}
+	\hfill 1,000 / 1,000 gp
+	\DndMonsterAction{Competitiveness Bonus}
+	\hfill +2
+	\DndMonsterAction{Profit Roll}
+	\hfill $1d12$
+
+	\DndMonsterSection{Costs}
+	Every month, the total monthly cost (30 × total daily cost) is subtracted
+	from the paid-in capital before the profit roll.
+	If the paid-in capital goes down to 0, the jeweller goes bankrupt,
+	and there is nothing to recuperate.\par
+
+	The daily cost includes the wages of one skilled gemcutter (2 gp/day)
+	and the costs of replenishing inventory.
+	The cost does not include rent, as the shop is assumed to be owned.
+	If the player rents the property, add the rent to the daily cost.
+	The value of the property and rent are left to the DM to decide.\par
+
+	\DndMonsterSection{Actions}
+	The jeweller shop takes one action every month.
+
+	\DndMonsterAction{Make Profit}
+	This is only possible if there are no competitors.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	If successful, roll for profit and gain gold equal to the roll
+	times 30 gp. The gold can replenish the paid-in capital or be retained by the owner.\par
+	On a natural 20, the jeweller completes a masterwork piece — add an additional 10\% of the paid-in capital as bonus profit.
+
+	\DndMonsterAction{Collude}
+	This is possible only if there is a competitor, and both agree to collude.
+	Roll $d20$ and add the competitiveness bonus against DC 12.
+	The competitor also rolls. Profits are combined and split evenly.\par
+	On a failed roll, both suffer reduced margins and halve their profit this month.
+
+	\DndMonsterAction{Compete}
+	This is possible only if there is a competitor. If no collusion occurs, they compete.
+	Roll $d20$ and add the competitiveness bonus.
+	The competitor also rolls.
+	The winner rolls for profit, receiving twice the normal gp (multiply by 60 rather than 30).
+	The loser loses an amount equal to the roll times 30, in addition to the operating costs.\par
+	On a tie, neither makes profit — local markets are saturated for the month.
+
+	\DndMonsterAction{Replenish Capital}
+	As a bonus action, the owner can pay gold to increase
+	the paid-in capital, up to the max allowed.
+	Paid-in capital cannot be converted back to GP for the owner; it represents inventory and assets necessary for profit generation.
+\end{DndMonster}
+
 
 % TODO: Alchemist
 
