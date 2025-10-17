@@ -753,7 +753,9 @@ market player, run this as a ``Company'' - also see below.
 	A business of the same type in a nearby village, on the other side of the town,
 	or in a different neighborhood of the city is not necessarily a competitor.
 	What we mean here by ``competition'' is a \emph{direct} competitor.
-	This is a business that could
+	This is a business that can directly threaten the existence of the player's business.
+	There is not enough separation to be able to add any markups.
+	In economics terms, this is the business that can drive the profit margin to zero or even below.
 \end{DndSidebar}
 
 
@@ -764,6 +766,22 @@ for an additional minigame.\par
 
 The DM can come up with three candidates, some at least one of them may try to deceive the player about their skill.
 The player will likely have doubts about whether they chose the right person or not, just like in real life.\par
+
+\subsection{Shop Leveling}
+
+Businesses can ``level up'' just like characters.
+This is possible through an original design -- see below in section \nameref{subsubsec:original_design}\par
+
+When the business levels up, the competitiveness bonus increases just like the proficiency bonus of a character.
+
+\begin{DndTable}[header=Competitiveness Bonus]{Xrr}
+	Shop Level	&	Competitiveness Bonus \\
+	1-4		&	+2 \\
+	5-8		&	+3 \\
+	9-12	&	+4 \\
+	13-16	&	+5 \\
+	17-20	&	+6 \\
+\end{DndTable}
 
 \subsection{Product Lines}
 
@@ -832,9 +850,7 @@ Hook: Supply chain disruption threatens the availability of luxury items.\par
 
 \subsubsection{Discount Line}
 
-% TODO: Rewrite to simplify.
-
-Mass-market strategy that ensures constant sales, but invites competition.\par
+A mass-market strategy that ensures constant sales, but invites competition.\par
 
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Discount Line}
@@ -870,10 +886,7 @@ Resilient product line that guarantees staying power, but limited growth.\par
 Hook: A crisis (drought, war, festival) spikes demand—can the business keep up?
 A local authority puts a cap on prices.\par
 
-
 \subsubsection{Exclusive Contract}
-
-% TODO: Rewrite to simplify.
 
 
 Guarantees a profit every month. However, if the patron withdraws support,
@@ -947,24 +960,8 @@ This brings in 60 gp a month, guaranteed, but requires a high level of capital.
 Hooks: The government may demand favors, errands, or loyalty.
 The player may be forced to bribe officials, or navigate bureaucratic red tape.\par
 
-\subsubsection{Original Design}
-
-% TODO: Rewrite to simplify.
-
-The player spends some time to create a new product line.
-This involves three proficiency checks over the course of a month.
-The proficiency is the same as the one used to run the business.
-However, only the businesses with a tool proficiency can use this product line.\par
-
-% TODO: Map Originality to Compatitiveness
-% Originality should yield a bonus to the competitiveness bonus.
-% Charisma should result in increaed profits or more profit rolls.
-% Cost should reduce the daily cost. ?
-% TODO: Map Charisma to Profit Die.
 
 \subsubsection{Illegal Side Hustle}
-
-% TODO: Rewrite to simplify.
 
 \begin{DndComment}[color=bgtan2018]{}
 	\DndMonsterSection{Illegal Side Hustle}
@@ -981,7 +978,6 @@ However, only the businesses with a tool proficiency can use this product line.\
 
 Hook: Risk of legal trouble, raids, confrontration with criminal elements, or moral dilemmas.\par
 
-Table:
 \begin{DndTable}[header=Profit Die \& Additional Profit Die]{Xrr}
 	Original Profit Die	&	Additional Profit Die \\
 	$1d4$	&	$1d6$ \\
@@ -990,6 +986,65 @@ Table:
 	$1d10$	&	$1d12$ \\
 	$1d12$	&	$1d12$ \\
 \end{DndTable}
+
+\subsubsection{Original Design}
+\label{subsubsec:original_design}
+
+The player spends some time to create a new product line.
+This involves three proficiency checks over the course of a month.
+The proficiency is the same as the one used to run the business.
+However, only the businesses with a tool proficiency can use this product line.\par
+
+Potentially, an original design can provide bonuses in competitiveness and cost.
+However, it also has the potential to create a competitor.\par
+
+The player has to spend a month for the design.
+At the end of the month, the player makes three rolls with the relevant proficiency.
+Assign the result of the roll (dice + proficiency bonus) to the following three attributes:
+\begin{enumerate}
+	\item Originality
+	\item Charisma
+	\item Cost
+\end{enumerate}
+Treat these similar to the attributes of a character.
+Use the following table to determine the modifier for each attribute.
+For originality, the modifier adds to the competitiveness bonus.
+For charisma, the modifier adds to the profit die.
+For cost, the modifier reduces the daily cost (one gp per modifier).\par
+\begin{DndTable}[header=Attribute Scores]{Xrr}
+	Score	&	Modifier & Description \\
+	1-3		&	-4 & Poor \\
+	4-5		&	-3 & Below Average \\
+	6-7		&	-2 & Slightly Below Average \\
+	8-9		&	-1 & Somewhat Average \\
+	10-11	&	0 & Average \\
+	12-13	&	+1 & Somewhat Above Average \\
+	14-15	&	+2 & Above Average \\
+	16-17	&	+3 & Great \\
+	18-19	&	+4 & Excellent \\
+	20+		&	+5 & Extraordinary \\
+\end{DndTable}
+
+In addition, if the profit roll is a natural 20, the design is a hit,
+	and the shop ``levels up''. This increases the
+	competitiveness bonus based on the proficiency bonus table.
+	This is the only way that a shop can ``level up''.
+\begin{DndTable}[header=Competitiveness Bonus]{Xrr}
+	Shop Level	&	Competitiveness Bonus \\
+	1-4		&	+2 \\
+	5-8		&	+3 \\
+	9-12	&	+4 \\
+	13-16	&	+5 \\
+	17-20	&	+6 \\
+\end{DndTable}
+
+However, if the profit roll fails by 5 or more, a competitor emerges.
+	This competitor has the same competitiveness bonus as the shop,
+	but has a profit die that is one die face lower than the original shop.
+	(For example, if the original shop has $1d8$, the competitor has $1d6$.)
+	The competitor will compete every month, as described above.
+
+
 
 \subsection{Different Types of Businesses}
 
@@ -1143,7 +1198,13 @@ A potential hook is that the apprentice opens up their own shop, at the other en
 
 \paragraph{Village Bakery}
 
-% TODO: Finish this.
+A bakery is a low-cost business that can be found in every village.
+The paid-in capital is low, and the daily cost is low,
+making it easy to open a bakery even for adventurers that are just starting out.\par
+
+A village bakery is easy to overlook, but in fact, bakeries are a necessity in every village.
+Add the product line ``Essential Service'' to create a bakery specializing in bread,
+or ``Specialty Goods'' to create a bakery specializing in cakes and pastries.\par
 
 \begin{DndMonster}[width=.5\textwidth - 8pt]{Village Bakery}
 	\DndMonsterType{Construct (Business), corporeal, neutral}
@@ -1264,6 +1325,15 @@ The daily cost is also high, because the shop needs a skilled worker, and the in
 	the paid-in capital, up to the max allowed.
 	Paid-in capital cannot be converted to GP for the owner; it represents inventory and assets necessary for profit generation.
 \end{DndMonster}
+
+\paragraph{Jeweller Shop}
+
+A jeweller shop is a high-cost business that can be found in major trade hubs.
+The paid-in capital is high, and the daily cost is also high,
+making it a challenging business to run.\par
+
+It is an excellent choice for players that want to run a profitable business,
+but not a magic shop.
 
 \begin{DndMonster}[width=.5\textwidth - 8pt]{Jeweller}
 	\DndMonsterType{Construct (Business), corporeal, neutral}
