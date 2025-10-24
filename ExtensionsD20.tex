@@ -2029,8 +2029,16 @@ Then put them in desperate situations where they need the bonus.\par
 
 \subsection{Conjuration Spells}
 
-% TODO: The player can learn spells by defeating elementals and aberrations. Give a template for each level, explain the filter and restriction. They can also combine this with the Stand-Off mechanic.
-% TODO: Optional rule: Add a check to control the conjured creature, if the total level is higher than the caster. Or, add the levels of the creatures and roll against that level. Or have each creture roll a Wisdom saving throw against the caster.
+When faced with a new outsider or elemental, a player character can choose to try to communicate with it rather than kill it outright.
+Basically, they need to take any sort of action that involves the enemeny creature other than attacking it.
+This allows them to learn the relevant conjuration spell for the elemental.\par
+
+Alternatively, the player can try to learn the spell after defeating the creature.
+The player rolls Intelligence (Arcana) DC 15 + CR of the creature.
+If they succeed, they learn the relevant conjuration spell for the creature.
+If they fail, they can try again after another encounter with the same type of creature.\par
+
+
 % Cite the ``Kobold Guide to Magic''
 
 
@@ -2057,7 +2065,7 @@ The interpretation is that they understood how to communicate with these element
 
 D\&D uses the ``Vancian'' spellcasting paradigm: there is a known recipe with a known effect.
 If you follow the recipe, you get the effect.
-There is no written way to get a slightly different effect in the rules.\par
+There is no formal way to get a slightly different effect in the rules.\par
 
 Other systems, such as Mage the Ascension in the Chronicles of Darkness, allow for limitless creativity.
 This is fun, but can make things difficult for the GM.\par
@@ -2084,7 +2092,7 @@ Optionally, if they roll a nat 20, they can add the spell as a new spell.\par
 The spellcaster wants to cast the spell at a higher level and increase the damage or duration accordingly.
 First decide on what the level of the spell would be. For example, if they want \emph{Fireball} to deal as much damage as \emph{Cone of Cold} (8d8), the new spell level is 5.
 The player rolls Intelligence (Arcana) DC 15 + the new level of the spell as determined by the DM.
-If they fail, they lose the slot or the memorized spell.
+If they fail, they lose the slot or the memorized spell, and the spell fails with no effect.
 If the new spell level is a level that they do not have access to, also ask for a Constitution saving throw, DC 12 + the new level.
 If they fail, they take one level of exhaustion.
 
@@ -2100,7 +2108,60 @@ If they fail, they take one level of exhaustion.
 
 \section{Alternative Rules}
 
+\subsection{Wild Magic}
+
+There are rules for the much-celebrated ``Wild Magic'' sorcerer subclass in the Player's Handbook.
+I am writing the currently rules to make two improvements:
+first, I make it based on spellcasting ability modifiers, so the player has a better chance at controlling it based on their abilities.
+Second, I am changing the ``wild magic surge'' to be based on the existing spell.
+
+\begin{emphasisParagraph}
+	Use this if you want a ``wild magic'' experience that is closer to the how it is portrayed in movies and books.
+\end{emphasisParagraph}
+
+Whenever a ``wild magic'' sorceror casts a spell, they roll a saving throw based on their spellcasting ability -- so this is a Charisma saving throw unless the DM decides to use the same rules for other classes.
+The DC is 10 + the level of the spell.
+
+If they fail, the wild magic surge takes place.
+Instead of using the table from the Player's Handbook, roll d20 and use the table below.
+\begin{DndTable}[header=Wild Magic Surge]{rX}
+	Roll (d20)	& Effect \\
+	1			& The spell backfires: it targets the caster. \\
+	2-3			& The spell's target or area of effect shifts to the right -- see below. \\
+	4-5			& The spell's target or area of effect shifts to the left -- see below. \\
+	6-10		& The spell's damage type changes to the opposite element or just randomly. \\
+	11-15		& The spell's area of effect increases by 50\%, and the damage. \\
+	16-20		& The spell's duration doubles. \\
+\end{DndTable}
+
+If the spell's target shifts, go to the next person to the right or left from the player character's perspective.
+For targeted spells, choose the next person, whether friend or foe.
+For area of effect spells, shift the area adjacently to the right or left, and affect all creatures in the new area of effect.
+Same rule applies to cone-shaped area of effect spells.\par
+
+\paragraph*{Optional} If the player rolls 1 on the initial saving throw, the wild magic surge is truly unpredictable.
+Get a deck of spell cards, shuffle and pick one.
+The new spell's effect takes place instead of the intended spell.\par
+
+
+
 \subsection{Magic Takes Its Toll}
+
+The typical D\&D spellcasting rules do not allow for players to exert themselves when casting spells.
+However, the exerted spellcaster casting one final spell before collapsing is a common trope in fantasy literature and movies.
+Most recently, Elevan from \emph{Stranger Things} TV series did this.\par
+
+Once the spell slots or the memorized spells are used up, the spellcaster can still cast spells.
+However, each time they do so, they roll a Constitution saving throw against their own spell modifier,
+if they fail, they take one level of exhaustion.
+
+\begin{emphasisParagraph}
+	Use this to implement the idea that magic takes a toll on the caster.
+\end{emphasisParagraph}
+
+The most interesting aspect of this is that a spellcaster can keep casting spells, at the risk of exhaustion.
+This allows for dramatic moments where the spellcaster casts one final spell before collapsing.\par
+
 
 \subsection{Identify Spell}
 
@@ -2108,7 +2169,20 @@ If they fail, they take one level of exhaustion.
 
 \subsection{Spellcasting Focus}
 
-% TODO: Need an increasingly expenssive spellcasting focus / pouch for higher level spells.
+In the Harry Potter universe, obtaining a wand is such a big deal.
+In D\&D, spellcasting foci are not that critical, you sort of wish them away by saying that the spellcaster has a wand.
+This rule changes that.\par
+
+First, you can always cast spells with the required components.
+But if you want to forsake the components, you can use a spellcasting focus.
+This spellcasting focus is by level.
+
+% TODO: Finish thhis.
+
+% TODO: Add rules for the cost of the foci, or for defeating monsters to obtain the foci.
+
+% TODO: Rules for upgrading the foci.
+
 
 \subsection{Permanency}
 
