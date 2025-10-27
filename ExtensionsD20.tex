@@ -2117,22 +2117,78 @@ Second, I am changing the ``wild magic surge'' to be based on the existing spell
 
 \begin{emphasisParagraph}
 	Use this if you want a ``wild magic'' experience that is closer to the how it is portrayed in movies and books.
+	Great for Elsa-like characters and aberrant dragonmarked sorcerers from Eberron.
 \end{emphasisParagraph}
 
 Whenever a ``wild magic'' sorceror casts a spell, they roll a saving throw based on their spellcasting ability -- so this is a Charisma saving throw unless the DM decides to use the same rules for other classes.
 The DC is 10 + the level of the spell.
 
-If they fail, the wild magic surge takes place.
+If they fail, the wild magic surge takes place. The surge is not a random effect, but rather an effect that is based on the spell that was just cast.
+
+
+% TODO: Change the following table. Think a bit on the effects, maybe use an LLM to wrte an Appendix.
 Instead of using the table from the Player's Handbook, roll d20 and use the table below.
 \begin{DndTable}[header=Wild Magic Surge]{rX}
 	Roll (d20)	& Effect \\
 	1			& The spell backfires: it targets the caster. \\
 	2-3			& The spell's target or area of effect shifts to the right -- see below. \\
 	4-5			& The spell's target or area of effect shifts to the left -- see below. \\
-	6-10		& The spell's damage type changes to the opposite element or just randomly. \\
-	11-15		& The spell's area of effect increases by 50\%, and the damage. \\
-	16-20		& The spell's duration doubles. \\
+	6-7			& The spell's damage type changes to the opposite element. \\
+	8-9			& In addition to the effect of the spell, an elemental is conjured of the same element. \\
+	10-17		& Spell's area of effect and damage doubles. \\
+	18-20		& Something worse happens. Roll on the table below.
 \end{DndTable}
+
+When switching the damage type to the opposite element, use the following table:
+\begin{DndTable}[header=Opposite Elements]{ll}
+	Original Damage Type	& New Damage Type \\
+	Acid				& Cold \\
+	Cold				& Fire \\
+	Fire				& Cold \\
+	Force				& Thunder \\
+	Lightning			& Necrotic \\
+	Necrotic			& Radiant \\
+	Poison				& Psychic \\
+	Psychic				& Poison \\
+	Radiant				& Necrotic \\
+	Thunder				& Force \\
+\end{DndTable}
+
+When conjuring an elemental, make sure that the CR of the elemental is at most equal to half the level of the spell that was just cast, rounded down.\par
+Here is a table of spell levels, damage types, and the corresponding elementals:
+\begin{DndTable}[header=Elementals by Spell Level and Damage Type]{rll}
+	Spell Level	& Damage Type	& Elemental \\
+	1-2			& Acid			& Mud Mephit \\
+	1-2			& Cold			& Ice Mephit \\
+	1-2			& Fire			& Fire Mephit \\
+	1-2			& Lightning		& Smoke Mephit \\
+	3-4			& Acid			& Oozing Elemental \\
+	3-4			& Cold			& Ice Elemental \\
+	3-4			& Fire			& Fire Elemental \\
+	3-4			& Lightning		& Air Elemental \\
+	5-6			& Acid			& Ochre Jelly \\
+	5-6			& Cold			& Water Elemental \\
+	5-6			& Fire			& Magma Elemental \\
+	5-6			& Lightning		& Earth Elemental \\
+\end{DndTable}
+
+If an elemental arrives, the caster can attempt to control it.
+The caster rolls Charisma (Persuasion) DC 15 + CR of the elemental.
+If they succeed, the elemental is friendly to the caster and their allies.
+If they fail, the elemental is hostile to the caster and their allies.
+The elemental disappears after 1 hour or if it drops to 0 hit points.\par
+
+
+% TODO: The spell backfires, it targets the caster
+% TODO: target or the area of effect shifts to the right
+% TODO: target or the area of effect shifts to the left
+% TODO: Damage type changes to the opposite element or just randomly
+% TODO: In addition to the effect of the spell, an elemental is conjured of the same element.
+% TODO: Spell's area of effect and damage doubles.
+
+% TODO: Worse stuff happens, shift to the second table.
+
+
 
 If the spell's target shifts, go to the next person to the right or left from the player character's perspective.
 For targeted spells, choose the next person, whether friend or foe.
@@ -2156,7 +2212,7 @@ However, each time they do so, they roll a Constitution saving throw against the
 if they fail, they take one level of exhaustion.
 
 \begin{emphasisParagraph}
-	Use this to implement the idea that magic takes a toll on the caster.
+	Use this to add drama to spellcasting.
 \end{emphasisParagraph}
 
 The most interesting aspect of this is that a spellcaster can keep casting spells, at the risk of exhaustion.
@@ -2165,7 +2221,26 @@ This allows for dramatic moments where the spellcaster casts one final spell bef
 
 \subsection{Identify Spell}
 
-% TODO: Just one property at a time. DC 15 + spell level.
+Players can roll an Intelligence (Arcana) check to learn the properties of an item.
+The DC is 15 + the level of the spell that created the item.
+If they succeed, they learn one of the properties of the item.
+If they roll a nat 20, they learn all properties of the item.
+If they fail, they need to wait until they reach the next level to try again.
+\begin{emphasisParagraph}
+	Use this if you want to make identifying magical items more interactive,
+	and to hide the curses and other properties of the magical items.
+\end{emphasisParagraph}
+
+The spell \emph{Identify} adds a non-stackable +20 bonus to the roll for the next hour.
+
+Example: A player finds a \emph{Cloak of Protection +1} that is cursed.
+The player rolls Intelligence (Arcana) DC 17.
+If they succeed, they learn that the cloak gives +1 AC and +1 saving throws.
+If they roll a nat 20, they learn that the cloak is cursed.
+If they fail, they can try again after reaching the next level.
+If they succeed, but want to investigate further, they can roll again, but the curse is a higher DC.
+
+% TODO: Clarify the DC for finding out.
 
 \subsection{Spellcasting Focus}
 
