@@ -2106,71 +2106,70 @@ If they fail, they take one level of exhaustion.
 
 \subsection{Mirror Magic}
 
+\subsection{Optional Rule: Truly Vile Magic}
+
+When playing D\&D, I always wondered how the bad nacromancers are able to sustain whole \emph{armies} of undead, when I cannot sustain even a few.
+One answer is to use the rule for permancy, see below \namedref{subsec:permanency}.
+However, another answer is that the truly vile necromancers use forbidden magic.\par
+
+Basically, for any spell, the caster can choose to kill a creature in sacrificial manner.
+The creature must be within 5ft of the caster.
+The caster then rolls Intelligence (Arcana) DC 15 + level of the spell.
+If they succeed, they choose from one of the following effects:
+
+\begin{itemize}
+	\item The spell's duration becomes permanent, until dispelled.
+	\item One of the limitations of the spell is ignored.
+\end{itemize}
 \section{Alternative Rules}
 
 \subsection{Wild Magic}
 
 There are rules for the much-celebrated ``Wild Magic'' sorcerer subclass in the Player's Handbook.
-I am writing the currently rules to make two improvements:
-first, I make it based on spellcasting ability modifiers, so the player has a better chance at controlling it based on their abilities.
-Second, I am changing the ``wild magic surge'' to be based on the existing spell.
+The wild magic surge table is unrelated to the underlying spell, which bothers me.
+In Disney's ``Frozen'', Elsa does not random effects when her innate talent goes wrong, they all follow the theme of cold and ice.
+I wanted to capture that literary trope for my campaigns.
 
 \begin{emphasisParagraph}
 	Use this if you want a ``wild magic'' experience that is closer to the how it is portrayed in movies and books.
 	Great for Elsa-like characters and aberrant dragonmarked sorcerers from Eberron.
 \end{emphasisParagraph}
 
-Whenever a ``wild magic'' sorceror casts a spell, they roll a saving throw based on their spellcasting ability -- so this is a Charisma saving throw unless the DM decides to use the same rules for other classes.
-The DC is 10 + the level of the spell.
+Whenever a ``wild magic'' sorceror casts a spell, they roll an Arcana (Cha) check to keep it under control.
+(So the Arcana check is based on Charisma, the spellcasting abilitypar for sorcerers, and it is not based on Intelligence.)
+This reflects that the wild magic sorcerer can actually learn to keep their magic under control by investing in Arcana.
+The DC is 10 + the level of the spell.\par
 
-If they fail, the wild magic surge takes place. The surge is not a random effect, but rather an effect that is based on the spell that was just cast.
+If they fail, the wild magic surge takes place.
+The surge is related to the spell that was just cast, instead of being completely random.
+Here is a table for spells that deal damage, for transmutation and conjuration spells.
+For other spells, I am planning to include an appendix.\par
+% TODO: Include an appendix for other spells.
 
+\subsubsection{Wild Magic Surge for Damage-Dealing Spells}
 
-% TODO: Change the following table. Think a bit on the effects, maybe use an LLM to wrte an Appendix.
+If the original Arcana (Cha) check fails, roll d20 to determine the effect.
+If the check failed with a natural 1, roll twice on the table and apply both effects.
+However, if the check passed with a Natural 20, the caster can choose an effect from the table and apply it instead of the original spell.\par
+
 Instead of using the table from the Player's Handbook, roll d20 and use the table below.
-\begin{DndTable}[header=Wild Magic Surge]{rX}
+\begin{DndTable}[header=Wild Magic Surge for Spells That Deal Damage]{rX}
 	Roll (d20)	& Effect \\
-	1			& The spell backfires: it targets the caster. \\
-	2-3			& The spell's target or area of effect shifts to the right -- see below. \\
-	4-5			& The spell's target or area of effect shifts to the left -- see below. \\
-	6-7			& The spell's damage type changes to the opposite element. \\
-	8-9			& In addition to the effect of the spell, an elemental is conjured of the same element. \\
-	10-17		& Spell's area of effect and damage doubles. \\
-	18-20		& Something worse happens. Roll on the table below.
+	1			& The spell backfires: the caster must roll a Dex save against their own spell or fall prone and take half the spell's damage. \\
+	2-3			& The spell turns into \emph{Faerie Fire}. It keeps its original area of effect, if any, and duration. \\
+	4-5			& The spell's target or area of effect shifts to the right -- see below. \\
+	6-7			& The spell's target or area of effect shifts to the left -- see below. \\
+	8-9			& The spell turns into \emph{Fireball} but with the damage type of the original spell. If a targeted spell, it is centered around the target. \\
+	10-11		& The spell turns into \emph{Chain Lightning} but with the damage type of the original spell. \\
+	12-13		& The spell turns into \emph{Cone of Cold} but with the damage type of the original spell. If a targeted spell, it is centered around the target. \\
+	14-15		& In addition to the effect of the spell, an elemental is conjured of the same element. \\
+	16-17		& Spell's area of effect and damage doubles. If targeted, it behaves akin to \emph{Chain Lightning}, jumping from target to target. \\
+	18-19		& The spell deals maximum damage. \\
+	20			& The spell deals maximum damage, and the target automatically fails their saving throw. \\
 \end{DndTable}
 
-When switching the damage type to the opposite element, use the following table:
-\begin{DndTable}[header=Opposite Elements]{ll}
-	Original Damage Type	& New Damage Type \\
-	Acid				& Cold \\
-	Cold				& Fire \\
-	Fire				& Cold \\
-	Force				& Thunder \\
-	Lightning			& Necrotic \\
-	Necrotic			& Radiant \\
-	Poison				& Psychic \\
-	Psychic				& Poison \\
-	Radiant				& Necrotic \\
-	Thunder				& Force \\
-\end{DndTable}
 
 When conjuring an elemental, make sure that the CR of the elemental is at most equal to half the level of the spell that was just cast, rounded down.\par
-Here is a table of spell levels, damage types, and the corresponding elementals:
-\begin{DndTable}[header=Elementals by Spell Level and Damage Type]{rll}
-	Spell Level	& Damage Type	& Elemental \\
-	1-2			& Acid			& Mud Mephit \\
-	1-2			& Cold			& Ice Mephit \\
-	1-2			& Fire			& Fire Mephit \\
-	1-2			& Lightning		& Smoke Mephit \\
-	3-4			& Acid			& Oozing Elemental \\
-	3-4			& Cold			& Ice Elemental \\
-	3-4			& Fire			& Fire Elemental \\
-	3-4			& Lightning		& Air Elemental \\
-	5-6			& Acid			& Ochre Jelly \\
-	5-6			& Cold			& Water Elemental \\
-	5-6			& Fire			& Magma Elemental \\
-	5-6			& Lightning		& Earth Elemental \\
-\end{DndTable}
 
 If an elemental arrives, the caster can attempt to control it.
 The caster rolls Charisma (Persuasion) DC 15 + CR of the elemental.
@@ -2178,16 +2177,10 @@ If they succeed, the elemental is friendly to the caster and their allies.
 If they fail, the elemental is hostile to the caster and their allies.
 The elemental disappears after 1 hour or if it drops to 0 hit points.\par
 
-
-% TODO: The spell backfires, it targets the caster
-% TODO: target or the area of effect shifts to the right
-% TODO: target or the area of effect shifts to the left
-% TODO: Damage type changes to the opposite element or just randomly
-% TODO: In addition to the effect of the spell, an elemental is conjured of the same element.
-% TODO: Spell's area of effect and damage doubles.
-
-% TODO: Worse stuff happens, shift to the second table.
-
+When doubling the area of effect and damage, the spell's damage dice double.
+For example, if the spell deals 6d6 damage, it now deals 12d6 damage.
+If the spell has an area of effect, such as a 20ft radius sphere, the area of effect doubles (so now it is a 40ft radius sphere).
+If the spell does not have an area of effect, it jumps to the nearest target within range, if any, and continues as per the rules in \emph{Chain Lightning}.\par
 
 
 If the spell's target shifts, go to the next person to the right or left from the player character's perspective.
@@ -2195,11 +2188,60 @@ For targeted spells, choose the next person, whether friend or foe.
 For area of effect spells, shift the area adjacently to the right or left, and affect all creatures in the new area of effect.
 Same rule applies to cone-shaped area of effect spells.\par
 
-\paragraph*{Optional} If the player rolls 1 on the initial saving throw, the wild magic surge is truly unpredictable.
-Get a deck of spell cards, shuffle and pick one.
-The new spell's effect takes place instead of the intended spell.\par
+
+\subsubsection{Wild Magic Surge for Transmutation Spells}
+
+If the original Arcana (Cha) check fails, roll d20 to determine the effect.
+If the check failed with a natural 1, roll twice on the table and apply both effects.
+However, if the check passed with a Natural 20, the caster can choose an effect from the table and apply it instead of the original spell.\par
 
 
+
+\begin{DndTable}[header=Wild Magic Surge for Transmutation Spells]{rX}
+	Roll (d20)	& Effect \\
+	1			& The caster is transmuted into a random creature CR 1/4. DM decides on the created. Roll a Wis saving throw after every long rest to revert.\\
+	2			& The caster grows a pair of large, colorful wings for 1d12 hours, granting a flying speed of 30 ft, and disadvanage to social rolls, depending on the style of the wings. \\
+	3			& The target is transmuted into a creature with the CR of the caster. DM decides. Roll a Wis saving throw after every long rest to revert. \\
+	4			& The spell's target or area of effect shifts to the right -- see below. \\
+	5			& The spell's target or area of effect shifts to the left -- see below. \\
+	6			& The caster is under the effect of \emph{enlarge/reduce}. Roll $1d4$ to decide. \\
+	7			& The target is under the effect of \emph{enlarge/reduce}. Roll $1d4$ to decide. \\
+	8			& The caster's hair, skin, and eyes permanently change to random vivid colors. This causes disadvanage at social rolls when relevant.\\
+	9			& The caster is under the effect of the \emph{fly} spell, or roll again if the intended spell is \emph{fly} \\
+	10			& The caster is under the effect of the \emph{haste} spell, or roll again if the intended spell is \emph{haste} \\
+	11			& The caster is under the effect of the \emph{slow} spell, or roll again if the intended spell is \emph{slow} \\
+	12			& The caster is under the effect of the \emph{blink} spell, or roll again if the intended spell is \emph{blink} \\
+	13			& The target is under the effect of the \emph{gaseous form} spell, or roll again if the intended spell was \emph{gaseous form} \\
+	14			& The caster is under the effect of the \emph{etherealness} spell, or roll again if the intended spell was \emph{etherealness} \\
+	15			& An object around the caster is under the effect of the \emph{Animate Object} spell. \\
+	16			& A creature around the target is under the effect of the \emph{Awaken} spell. \\
+	17			& The caster is petrified for 1 minute. \\
+	18			& The target is petrified for 1 minute. \\
+	19			& A random object in the vicinity is permanently transformed into a mimic. (DM decides on the object.)\\
+	20			& The spell works, but is permanent. \\
+\end{DndTable}
+
+The effects are all permanent, except for petrification, which takes 1 minute.
+All of these effect can be removed with \emph{Greater Restoration}, \emph{Dispel Magic}, or \emph{Remove Curse}.
+If the caster is effected, the effects can also be removed by passing a Wisdom saving throw after every long rest, DC is the original spellcasting DC of the caster.\par
+
+When shifting the spell's target or area of effect, go to the next person to the right or left from the player character's perspective.
+
+\subsubsection{Wild Magic Surge for Conjuration Spells}
+
+If the original Arcana (Cha) check to control the spell failed with a natural 1, the conjured creature is hostile to the caster and their allies.
+
+Otherwise, roll $d100$, open the page on the monster manual (or another sourcebook) that has the last two digits same as the roll, use the first monster on that page.
+If the monster has lower CR than the spell level, it is friendly to the caster and their allies.
+If the monster has higher CR than the spell level, the spellcaster must roll Charisma (Persuasion) DC 15 + CR of the creature.
+If they succeed, the conjured creature is friendly to the caster and their allies, or can make minor demands from the caster.
+If they fail, the conjured creature is either hostile, or can make demands from the caster, at the DM's discretion.
+The conjured creature disappears after 1 hour or if it drops to 0 hit points.\par
+
+If the creature is a Djinni, they can grant wishes at the DM's discretion.
+If the creature is a demon or devil, it can try to bargain for souls or favors at the DM's discretion.\par
+
+% TODO: Necromeantic spells, divination spells, enchantment spells.
 
 \subsection{Magic Takes Its Toll}
 
